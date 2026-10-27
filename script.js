@@ -46,7 +46,7 @@ const NIVELES = {
             "microsoft": "Te falta la terminación: un dominio completo termina en algo como «.com»."
         },
         pistaGeneral: "El nombre visible puede escribirse como quiera quien envía el mensaje. Compará letra por letra con el nombre real del servicio.",
-        acierto: "Descubriste al impostor: el mensaje decía Microsoft, pero el dominio no era el verdadero."
+        acierto: "Le sacaste el disfraz a PHISH-X: el mensaje decía Microsoft, pero el dominio no era el verdadero."
     },
     3: {
         tipo: "multiple",
@@ -58,7 +58,7 @@ const NIVELES = {
             d: "Eso traslada el riesgo a otra persona. La alternativa segura es verificar desde el sitio o aplicación oficial.",
             f: "La exposición comienza al visitar el destino. No hace falta esperar a que pida información para decidir que no es una ruta segura."
         },
-        acierto: "Evitaste el enlace trampa: verificaste por una ruta independiente, sin tocar el botón."
+        acierto: "Evitaste el enlace trampa de PHISH-X: verificaste por una ruta independiente, sin tocar el botón."
     },
     4: {
         tipo: "casillas",
@@ -95,11 +95,11 @@ let nivelActual = 0;
 let errores = 0;          // errores en el nivel actual: deciden el premio
 let puntosPorNivel = [];  // para el certificado y su código QR
 let golpes = 0;           // para alternar la animación de daño
+let respuestaFallida = null;  // última respuesta incorrecta del nivel actual
 
 // Elementos que se usan muchas veces.
 const cuerpo = document.body;
 const campoNombre = document.querySelector("#nombre-jugador");
-const radiosEdad = document.querySelectorAll('input[name="edad"]');
 const radiosAvatar = document.querySelectorAll('input[name="avatar"]');
 const vistaAvatar = document.querySelector("#avatar-preview");
 const botonIniciar = document.querySelector("#btn-iniciar");
@@ -112,9 +112,25 @@ const botonRecursos = document.querySelector("#btn-recursos");
    Estas funciones solo reciben datos y devuelven un resultado:
    no leen ni cambian la página. */
 
-// Limpia lo que escribió el estudiante antes de comparar.
+// Limpia lo que escribió el estudiante antes de comparar:
+// sin mayúsculas y sin ningún espacio (ni al borde ni en el medio).
 function normalizar(texto) {
-    return texto.trim().toLowerCase();
+    return texto.toLowerCase().replaceAll(" ", "");
+}
+
+// Para el dominio también se ignoran "https://", "http://"
+// y una barra o un punto al final: "https://Microsoft.com/" vale.
+function limpiarDominio(texto) {
+    let limpio = normalizar(texto);
+    if (limpio.startsWith("https://")) {
+        limpio = limpio.slice("https://".length);
+    } else if (limpio.startsWith("http://")) {
+        limpio = limpio.slice("http://".length);
+    }
+    while (limpio.endsWith("/") || limpio.endsWith(".")) {
+        limpio = limpio.slice(0, -1);
+    }
+    return limpio;
 }
 
 // Puntos que se ganan al acertar después de "erroresEnNivel" errores.
@@ -129,6 +145,16 @@ function calcularPremio(erroresEnNivel) {
 function primeraVacia(respuestas) {
     for (let i = 0; i < respuestas.length; i++) {
         if (respuestas[i] === null || respuestas[i] === "") {
+            return i;
+        }
+    }
+    return -1;
+}
+
+// Posición de la primera respuesta que repite una anterior, o -1 si no hay.
+function primeraRepetida(respuestas) {
+    for (let i = 1; i < respuestas.length; i++) {
+        if (respuestas.slice(0, i).includes(respuestas[i])) {
             return i;
         }
     }
@@ -155,7 +181,7 @@ function contarAciertos(resultados) {
 }
 
 function corregirTexto(texto, validas) {
-    return validas.includes(normalizar(texto));
+    return validas.includes(limpiarDominio(texto));
 }
 
 function corregirMultiple(respuesta, correcta) {
@@ -176,6 +202,15 @@ function corregirCasillas(marcadas, sensibles) {
     return { bien: bien, mal: mal, faltan: sensibles.length - bien };
 }
 
+// Convierte cualquier respuesta en un texto para poder compararla
+// con la anterior: ["f","v"] → "f,v"; el dominio, ya limpio.
+function claveRespuesta(tipo, respuesta) {
+    if (tipo === "texto") {
+        return limpiarDominio(respuesta);
+    }
+    return String(respuesta);
+}
+
 // "100-50-100-100-100": nombre del archivo del QR en la carpeta qr/.
 function claveQR(puntos) {
     return puntos.join("-");
@@ -188,6 +223,14 @@ function codigoCertificado(puntos, vidasRestantes) {
         letras += LETRA_PREMIO[punto];
     }
     return "ACS-" + letras + "-L" + vidasRestantes;
+}
+
+// Fecha de hoy como la pide un <input type="date">: "2026-10-26".
+function fechaDeHoy() {
+    const hoy = new Date();
+    const mes = String(hoy.getMonth() + 1).padStart(2, "0");
+    const dia = String(hoy.getDate()).padStart(2, "0");
+    return hoy.getFullYear() + "-" + mes + "-" + dia;
 }
 
 
@@ -239,6 +282,9 @@ function leerRespuesta(n) {
 function mostrarFeedback(n, tipo, titulo, texto, lista) {
     const caja = document.querySelector("#feedback-l" + n);
     caja.classList.remove("correcto", "incorrecto", "aviso");
+    // Leer el ancho obliga al navegador a "ver" la caja sin clase:
+    // así el temblor de "incorrecto" se repite en cada error.
+    void caja.offsetWidth;
     caja.classList.add(tipo);
     caja.querySelector(".feedback-byte-titulo").textContent = titulo;
     caja.querySelector(".feedback-byte-texto").textContent = texto;
@@ -252,8 +298,13 @@ function mostrarFeedback(n, tipo, titulo, texto, lista) {
     }
 }
 
+// Avisos amarillos: no son errores, así que no restan vidas.
+function avisar(n, titulo, texto) {
+    mostrarFeedback(n, "aviso", titulo, texto + " No perdiste ninguna vida.", []);
+}
+
 function avisarFaltante(n, texto) {
-    mostrarFeedback(n, "aviso", "BYTE: Te falta responder", texto + " No perdiste ninguna vida.", []);
+    avisar(n, "BYTE: Te falta responder", texto);
 }
 
 // Pinta de verde o rojo una afirmación, opción, paso o campo.
@@ -372,6 +423,15 @@ function comprobarItems(n, respuestas) {
         avisarFaltante(n, datos.faltaTexto + (vacia + 1) + ".");
         return;
     }
+    // En el protocolo cada paso va una sola vez.
+    if (datos.tipo === "orden") {
+        const repetida = primeraRepetida(respuestas);
+        if (repetida !== -1) {
+            avisar(n, "BYTE: Revisá tus pasos",
+                "El paso " + (repetida + 1) + " repite una opción que ya elegiste antes. Cada paso del protocolo va una sola vez.");
+            return;
+        }
+    }
 
     const resultados = compararPorPosicion(respuestas, datos.claves);
     for (let i = 0; i < resultados.length; i++) {
@@ -394,7 +454,7 @@ function comprobarItems(n, respuestas) {
 function comprobarTexto(n, texto) {
     const datos = NIVELES[n];
     const campo = document.querySelector("#l" + n + "-item-1");
-    const limpio = normalizar(texto);
+    const limpio = limpiarDominio(texto);
     if (limpio === "") {
         avisarFaltante(n, "Escribí el dominio antes de comprobar.");
         return;
@@ -465,9 +525,20 @@ function comprobarNivel(n) {
     if (vidas === 0 || document.querySelector("#nivel-" + n).classList.contains("ganado")) {
         return;
     }
-    limpiarMarcas(n);
     const respuesta = leerRespuesta(n);
     const tipo = NIVELES[n].tipo;
+    const clave = claveRespuesta(tipo, respuesta);
+
+    // La misma respuesta que ya falló no se vuelve a corregir:
+    // se avisa y se dejan a la vista las marcas rojas anteriores.
+    if (clave === respuestaFallida) {
+        avisar(n, "BYTE: Es la misma respuesta",
+            "Esa respuesta ya la marqué como incorrecta. Cambiá lo que está en rojo antes de volver a comprobar.");
+        return;
+    }
+
+    limpiarMarcas(n);
+    const vidasAntes = vidas;
     if (tipo === "vf" || tipo === "orden") {
         comprobarItems(n, respuesta);
     } else if (tipo === "texto") {
@@ -477,6 +548,10 @@ function comprobarNivel(n) {
     } else if (tipo === "casillas") {
         comprobarCasillas(n, respuesta);
     }
+    // Si se perdió una vida, la respuesta fue incorrecta: se recuerda.
+    if (vidas < vidasAntes) {
+        respuestaFallida = clave;
+    }
 }
 
 // --- Recorrido de la campaña ---
@@ -484,6 +559,7 @@ function comprobarNivel(n) {
 function irANivel(n) {
     nivelActual = n;
     errores = 0;
+    respuestaFallida = null;
     if (n > 1) {
         cuerpo.classList.add("nivel-" + n + "-iniciado");
     }
@@ -501,6 +577,7 @@ function reiniciarEstado() {
     errores = 0;
     puntosPorNivel = [];
     golpes = 0;
+    respuestaFallida = null;
     cuerpo.classList.remove("golpe-a", "golpe-b");
 
     for (let n = 1; n <= TOTAL_NIVELES; n++) {
@@ -532,7 +609,9 @@ function mostrarGameOver() {
 function reiniciarCampania() {
     reiniciarEstado();
     cuerpo.classList.remove("campania-activa", "game-over");
-    document.querySelector("#primeros-pasos-final").scrollIntoView();
+    // El botón INICIAR NIVEL 1 está fijo abajo: se baja hasta el mapa
+    // de la campaña, que es lo último de "Cómo funciona la partida".
+    document.querySelector(".mapa").scrollIntoView();
     document.querySelector("#btn-iniciar-nivel1").focus({ preventScroll: true });
 }
 
@@ -547,28 +626,27 @@ function mostrarCertificado() {
     imagenQR.alt = "Código QR del certificado " + codigo;
     document.querySelector("#codigo-certificado").textContent = codigo;
 
+    // Si el estudiante todavía no eligió una fecha, se propone la de hoy.
+    const campoFecha = document.querySelector("#fecha-emision");
+    if (campoFecha.value === "") {
+        campoFecha.value = fechaDeHoy();
+    }
+
     cuerpo.classList.add("nivel-" + TOTAL_NIVELES + "-ganado");  // muestra el certificado y frena el reloj
     window.scrollTo(0, 0);
 }
 
 // --- Registro del jugador ---
 
-function edadElegida() {
-    return document.querySelector('input[name="edad"]:checked');
-}
-
 function avatarElegido() {
     return document.querySelector('input[name="avatar"]:checked');
 }
 
-// Habilita INICIAR PARTIDA solo con nombre, edad y avatar.
+// Habilita INICIAR PARTIDA solo con nombre y avatar.
 function revisarRegistro() {
     const faltan = [];
     if (campoNombre.value.trim().length < 2) {
         faltan.push("nombre (al menos 2 letras)");
-    }
-    if (edadElegida() === null) {
-        faltan.push("grupo de edad");
     }
     if (avatarElegido() === null) {
         faltan.push("avatar");
@@ -579,12 +657,6 @@ function revisarRegistro() {
     } else {
         avisoRegistro.textContent = "Te falta: " + faltan.join(", ") + ".";
     }
-}
-
-// Muestra los avatares del grupo de edad elegido.
-function aplicarEdad(radio) {
-    cuerpo.classList.remove("edad-child", "edad-teen", "edad-young", "edad-adult");
-    cuerpo.classList.add("edad-elegida", "edad-" + radio.value);
 }
 
 function aplicarAvatar(radio) {
@@ -611,20 +683,6 @@ function cerrarPanel(clase, boton) {
 
 campoNombre.addEventListener("input", revisarRegistro);
 
-for (const radio of radiosEdad) {
-    radio.addEventListener("change", function () {
-        aplicarEdad(radio);
-        // Cada grupo de edad tiene sus propios avatares: se vuelve a elegir.
-        const marcado = avatarElegido();
-        if (marcado !== null) {
-            marcado.checked = false;
-        }
-        cuerpo.classList.remove("avatar-elegido");
-        vistaAvatar.textContent = "👤";
-        revisarRegistro();
-    });
-}
-
 for (const radio of radiosAvatar) {
     radio.addEventListener("change", function () {
         aplicarAvatar(radio);
@@ -632,9 +690,13 @@ for (const radio of radiosAvatar) {
     });
 }
 
-botonIniciar.addEventListener("click", function () {
+// INICIAR PARTIDA es el botón de envío del formulario de registro:
+// también se activa con Enter en el nombre cuando el perfil está listo.
+document.querySelector("#form-registro").addEventListener("submit", function (event) {
+    event.preventDefault();
     revisarRegistro();
-    if (botonIniciar.disabled) {
+    // Sin perfil completo, o con la partida ya en marcha, no hace nada.
+    if (botonIniciar.disabled || cuerpo.classList.contains("partida-activa")) {
         return;
     }
     cuerpo.classList.add("partida-activa");
@@ -697,12 +759,9 @@ document.querySelector("#btn-cerrar-recursos").addEventListener("click", functio
 
 
 /* ---------- 6. Inicio ----------
-   Si el navegador recordó una edad o un avatar al recargar,
-   se vuelven a aplicar para que la pantalla coincida. */
+   Si el navegador recordó un avatar al recargar,
+   se vuelve a aplicar para que la pantalla coincida. */
 
-if (edadElegida() !== null) {
-    aplicarEdad(edadElegida());
-}
 if (avatarElegido() !== null) {
     aplicarAvatar(avatarElegido());
 }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Misión Clic Seguro: juego educativo sobre phishing para estudiantes de 3.º de EBI. Reconocé el engaño, verificá por un canal oficial y protegé tus datos." name="description"/>
+<meta content="Misión Clic Seguro: juego educativo sobre phishing para estudiantes de 3.º de EBI (13 a 16 años). Reconocé el engaño, verificá por un canal oficial y protegé tus datos." name="description"/>
 <title>Misión Clic Seguro · Campaña interactiva</title>
 <meta name="theme-color" content="#050a12"/>
 <link href="vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet"/>
@@ -12,16 +12,39 @@
 <link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-<header class="registro-overlay" id="registro">
-<div class="setup-only registro-portada">
+<div class="registro-overlay" id="registro">
+<header class="setup-only registro-portada">
 <p class="kicker">CENTRO DE ENTRENAMIENTO DIGITAL · OPERACIÓN CS-01</p>
 <h1><i class="bi bi-shield-lock-fill titulo-escudo" aria-hidden="true"></i><span class="titulo-juego">MISIÓN CLIC SEGURO</span></h1>
 <h2>Detectá el engaño antes de hacer clic</h2>
 <p class="intro-juego"><strong>¿Qué es este juego?</strong> Una partida de entrenamiento donde vas a aprender a reconocer mensajes de phishing mientras avanzás por niveles, ganás puntos, reunís gemas y evitás las trampas de PHISH-X.</p>
+<section class="mision-briefing" data-augmented-ui="tl-clip br-clip border" aria-labelledby="titulo-briefing">
+<p class="kicker"><i class="bi bi-broadcast" aria-hidden="true"></i> TRANSMISIÓN ENTRANTE · PRIORIDAD ALTA</p>
+<h3 id="titulo-briefing">Informe de misión</h3>
+<p class="mision-alerta">Alerta en la red de tu escuela: llegan correos y mensajes falsos que buscan robar contraseñas, códigos y datos de tarjetas. Detrás de todos ellos está <strong>PHISH-X</strong>.</p>
+<div class="mision-personajes">
+<article>
+<p class="mision-icono mision-icono-villano"><i class="bi bi-incognito" aria-hidden="true"></i></p>
+<h4>PHISH-X · el enemigo</h4>
+<p>Una banda de estafadores digitales. Se disfraza de empresas, bancos o servicios conocidos y prueba un truco distinto en cada ataque.</p>
+</article>
+<article>
+<p class="mision-icono mision-icono-agente"><i class="bi bi-person-badge-fill" aria-hidden="true"></i></p>
+<h4>Vos · agente en formación</h4>
+<p>Te sumás al Centro de Entrenamiento Digital. Tu misión: frenar cada mensaje de PHISH-X antes de hacer clic. Cada nivel superado es un <strong>ascenso</strong> en tu rango.</p>
+</article>
+<article>
+<p class="mision-icono mision-icono-byte"><i class="bi bi-robot" aria-hidden="true"></i></p>
+<h4>BYTE · tu asistente</h4>
+<p>Intercepta los mensajes de PHISH-X, te entrena antes de cada nivel y te explica por qué acertaste o te equivocaste.</p>
+</article>
+</div>
+<p class="mision-objetivo"><i class="bi bi-flag-fill" aria-hidden="true"></i> Si desarmás los cinco ataques, obtenés el rango de <strong>Analista Clic Seguro</strong>.</p>
+</section>
 <div class="ficha-oa">
 <article class="ficha-oa-item" data-augmented-ui="tl-clip br-clip border">
 <h3><i class="bi bi-people-fill" aria-hidden="true"></i> ¿Para quién es?</h3>
-<p>Para <strong>estudiantes de 3.º de EBI</strong>. Cualquier persona puede jugarlo, pero está pensado para ese grupo.</p>
+<p>Para <strong>estudiantes de 3.º de EBI</strong>, de <strong>13 a 16 años</strong>.</p>
 </article>
 <article class="ficha-oa-item" data-augmented-ui="tl-clip br-clip border">
 <h3><i class="bi bi-backpack2-fill" aria-hidden="true"></i> Antes de jugar necesitás</h3>
@@ -43,22 +66,22 @@
 </article>
 </div>
 <div class="como-jugar">
-<article data-augmented-ui="tr-clip bl-clip border"><p class="paso-numero">1</p><h3>Creá tu perfil</h3><p>Escribí tu nombre, elegí tu edad y seleccioná un avatar.</p></article>
+<article data-augmented-ui="tr-clip bl-clip border"><p class="paso-numero">1</p><h3>Creá tu perfil de agente</h3><p>Escribí tu nombre y elegí un avatar.</p></article>
 <article data-augmented-ui="tr-clip bl-clip border"><p class="paso-numero">2</p><h3>Primeros pasos</h3><p>Mirá el video, observá las evidencias y conocé las reglas antes de jugar.</p></article>
 <article data-augmented-ui="tr-clip bl-clip border"><p class="paso-numero">3</p><h3>Superá 5 niveles</h3><p>Cada nivel tiene un entrenamiento breve, un tipo de desafío distinto y una dificultad creciente.</p></article>
-<article data-augmented-ui="tr-clip bl-clip border"><p class="paso-numero">4</p><h3>Completá la campaña</h3><p>Superá los cinco niveles y restaurá la seguridad del sistema.</p></article>
+<article data-augmented-ui="tr-clip bl-clip border"><p class="paso-numero">4</p><h3>Desarmá a PHISH-X</h3><p>Superá los cinco niveles, restaurá la seguridad de la red y ganá tu certificado.</p></article>
 </div>
 <div class="reglas-claras">
 <p><strong><i class="bi bi-clipboard-check-fill" aria-hidden="true"></i> Primero:</strong> al pulsar <strong>INICIAR PARTIDA</strong> entrarás a <strong>Primeros pasos</strong>: video, evidencias y reglas en una sola pantalla.</p>
 <p><strong><i class="bi bi-stopwatch-fill" aria-hidden="true"></i> Importante:</strong> el cronómetro seguirá en <strong>0 segundos</strong> durante Primeros pasos. Empieza únicamente cuando arrancás el Nivel 1.</p>
 </div>
-</div>
+</header>
 <article class="perfil-persistente" title="Acercá el puntero a la parte superior para mostrar el menú de niveles">
 <div class="perfil-identidad">
 <div class="avatar-preview"><p class="avatar-preview-item avatar-preview-default" id="avatar-preview" title="Avatar seleccionado">👤</p></div>
-<div class="nombre-jugador"><p class="paso-registro-mini setup-only">1 · Escribí tu nombre de jugador</p>
-<label for="nombre-jugador"><strong>JUGADOR</strong></label>
-<input id="nombre-jugador" minlength="2" name="nombre-jugador" placeholder="Escribí tu nombre" required="" type="text"/>
+<div class="nombre-jugador"><p class="paso-registro-mini setup-only">1 · Escribí tu nombre de agente</p>
+<label for="nombre-jugador"><strong>AGENTE</strong></label>
+<input id="nombre-jugador" form="form-registro" minlength="2" name="nombre-jugador" placeholder="Escribí tu nombre" required="" type="text"/>
 </div>
 </div>
 <button type="button" class="editar-perfil editar-perfil-icon" id="btn-editar-perfil" title="Editar perfil" aria-label="Editar perfil"><i class="bi bi-gear-fill" aria-hidden="true"></i></button>
@@ -73,50 +96,27 @@
 </div>
 
 </article>
-<div class="setup-only registro-configuracion">
-<section class="bloque-registro" data-augmented-ui="tl-clip br-clip border">
-<h2>2 · Elegí tu grupo de edad</h2>
-<p>Los avatares cambian automáticamente según el grupo que elijas.</p>
-<div class="age-grid">
-<input class="control-opcion" id="edad-child" name="edad" type="radio" value="child"/><label for="edad-child">🧒 <strong>Niños</strong><br/>8–12</label>
-<input class="control-opcion" id="edad-teen" name="edad" type="radio" value="teen"/><label for="edad-teen">🧑 <strong>Adolescentes</strong><br/>13–17</label>
-<input class="control-opcion" id="edad-young" name="edad" type="radio" value="young"/><label for="edad-young">👨‍💻 <strong>Jóvenes</strong><br/>18–29</label>
-<input class="control-opcion" id="edad-adult" name="edad" type="radio" value="adult"/><label for="edad-adult">🧔 <strong>Adultos</strong><br/>30+</label>
-</div>
-</section>
+<!-- El nombre se escribe en la barra de perfil, pero pertenece a este formulario por su atributo form="form-registro". -->
+<form class="setup-only registro-configuracion" id="form-registro" aria-label="Perfil del agente" novalidate>
 <section class="bloque-registro avatar-selector" data-augmented-ui="tl-clip br-clip border">
-<h2>3 · Elegí tu avatar</h2>
-<p class="avatar-help">Se muestran <strong>20 opciones por grupo de edad: 10 masculinas y 10 femeninas</strong>.</p>
-<div class="avatar-group avatars-child">
-<div class="avatar-group-title"><h3>Niños · 8 a 12 años</h3><p>Elegí uno de los 20 avatares. El símbolo ♂/♀ identifica el perfil visual.</p></div>
-<h4>10 avatares masculinos</h4><div class="avatar-grid"><input class="control-opcion" id="av-child-m1" name="avatar" required="" type="radio" value="child-m1"/><label class="avatar-option" for="av-child-m1" title="Avatar Leo, masculinos"><strong class="avatar-emoji">👦🏻⚡</strong><strong>Leo ♂</strong></label><input class="control-opcion" id="av-child-m2" name="avatar" type="radio" value="child-m2"/><label class="avatar-option" for="av-child-m2" title="Avatar Tomi, masculinos"><strong class="avatar-emoji">👦🏼🎮</strong><strong>Tomi ♂</strong></label><input class="control-opcion" id="av-child-m3" name="avatar" type="radio" value="child-m3"/><label class="avatar-option" for="av-child-m3" title="Avatar Nico, masculinos"><strong class="avatar-emoji">👦🏽🛡️</strong><strong>Nico ♂</strong></label><input class="control-opcion" id="av-child-m4" name="avatar" type="radio" value="child-m4"/><label class="avatar-option" for="av-child-m4" title="Avatar Max, masculinos"><strong class="avatar-emoji">👦🏾🚀</strong><strong>Max ♂</strong></label><input class="control-opcion" id="av-child-m5" name="avatar" type="radio" value="child-m5"/><label class="avatar-option" for="av-child-m5" title="Avatar Ben, masculinos"><strong class="avatar-emoji">👦🏿🔍</strong><strong>Ben ♂</strong></label><input class="control-opcion" id="av-child-m6" name="avatar" type="radio" value="child-m6"/><label class="avatar-option" for="av-child-m6" title="Avatar Alex, masculinos"><strong class="avatar-emoji">🧒🏻🧢</strong><strong>Alex ♂</strong></label><input class="control-opcion" id="av-child-m7" name="avatar" type="radio" value="child-m7"/><label class="avatar-option" for="av-child-m7" title="Avatar Ivo, masculinos"><strong class="avatar-emoji">🧒🏼🎧</strong><strong>Ivo ♂</strong></label><input class="control-opcion" id="av-child-m8" name="avatar" type="radio" value="child-m8"/><label class="avatar-option" for="av-child-m8" title="Avatar Dani, masculinos"><strong class="avatar-emoji">🧒🏽⚽</strong><strong>Dani ♂</strong></label><input class="control-opcion" id="av-child-m9" name="avatar" type="radio" value="child-m9"/><label class="avatar-option" for="av-child-m9" title="Avatar Sam, masculinos"><strong class="avatar-emoji">🧒🏾🦖</strong><strong>Sam ♂</strong></label><input class="control-opcion" id="av-child-m10" name="avatar" type="radio" value="child-m10"/><label class="avatar-option" for="av-child-m10" title="Avatar Teo, masculinos"><strong class="avatar-emoji">🧒🏿🤖</strong><strong>Teo ♂</strong></label></div>
-<h4>10 avatares femeninos</h4><div class="avatar-grid"><input class="control-opcion" id="av-child-f1" name="avatar" type="radio" value="child-f1"/><label class="avatar-option" for="av-child-f1" title="Avatar Luna, femeninos"><strong class="avatar-emoji">👧🏻✨</strong><strong>Luna ♀</strong></label><input class="control-opcion" id="av-child-f2" name="avatar" type="radio" value="child-f2"/><label class="avatar-option" for="av-child-f2" title="Avatar Mia, femeninos"><strong class="avatar-emoji">👧🏼🎮</strong><strong>Mia ♀</strong></label><input class="control-opcion" id="av-child-f3" name="avatar" type="radio" value="child-f3"/><label class="avatar-option" for="av-child-f3" title="Avatar Sofi, femeninos"><strong class="avatar-emoji">👧🏽🛡️</strong><strong>Sofi ♀</strong></label><input class="control-opcion" id="av-child-f4" name="avatar" type="radio" value="child-f4"/><label class="avatar-option" for="av-child-f4" title="Avatar Emma, femeninos"><strong class="avatar-emoji">👧🏾🚀</strong><strong>Emma ♀</strong></label><input class="control-opcion" id="av-child-f5" name="avatar" type="radio" value="child-f5"/><label class="avatar-option" for="av-child-f5" title="Avatar Zoe, femeninos"><strong class="avatar-emoji">👧🏿🔍</strong><strong>Zoe ♀</strong></label><input class="control-opcion" id="av-child-f6" name="avatar" type="radio" value="child-f6"/><label class="avatar-option" for="av-child-f6" title="Avatar Ari, femeninos"><strong class="avatar-emoji">🧒🏻🌈</strong><strong>Ari ♀</strong></label><input class="control-opcion" id="av-child-f7" name="avatar" type="radio" value="child-f7"/><label class="avatar-option" for="av-child-f7" title="Avatar Lola, femeninos"><strong class="avatar-emoji">🧒🏼🎧</strong><strong>Lola ♀</strong></label><input class="control-opcion" id="av-child-f8" name="avatar" type="radio" value="child-f8"/><label class="avatar-option" for="av-child-f8" title="Avatar Vicky, femeninos"><strong class="avatar-emoji">🧒🏽⚽</strong><strong>Vicky ♀</strong></label><input class="control-opcion" id="av-child-f9" name="avatar" type="radio" value="child-f9"/><label class="avatar-option" for="av-child-f9" title="Avatar Noa, femeninos"><strong class="avatar-emoji">🧒🏾🦄</strong><strong>Noa ♀</strong></label><input class="control-opcion" id="av-child-f10" name="avatar" type="radio" value="child-f10"/><label class="avatar-option" for="av-child-f10" title="Avatar Cami, femeninos"><strong class="avatar-emoji">🧒🏿🤖</strong><strong>Cami ♀</strong></label></div>
-</div><div class="avatar-group avatars-teen">
-<div class="avatar-group-title"><h3>Adolescentes · 13 a 17 años</h3><p>Elegí uno de los 20 avatares. El símbolo ♂/♀ identifica el perfil visual.</p></div>
-<h4>10 avatares masculinos</h4><div class="avatar-grid"><input class="control-opcion" id="av-teen-m1" name="avatar" type="radio" value="teen-m1"/><label class="avatar-option" for="av-teen-m1" title="Avatar Axel, masculinos"><strong class="avatar-emoji">🧑🏻‍💻</strong><strong>Axel ♂</strong></label><input class="control-opcion" id="av-teen-m2" name="avatar" type="radio" value="teen-m2"/><label class="avatar-option" for="av-teen-m2" title="Avatar Bruno, masculinos"><strong class="avatar-emoji">🧑🏼‍🎮</strong><strong>Bruno ♂</strong></label><input class="control-opcion" id="av-teen-m3" name="avatar" type="radio" value="teen-m3"/><label class="avatar-option" for="av-teen-m3" title="Avatar Gael, masculinos"><strong class="avatar-emoji">🧑🏽‍🚀</strong><strong>Gael ♂</strong></label><input class="control-opcion" id="av-teen-m4" name="avatar" type="radio" value="teen-m4"/><label class="avatar-option" for="av-teen-m4" title="Avatar Ian, masculinos"><strong class="avatar-emoji">🧑🏾‍🎨</strong><strong>Ian ♂</strong></label><input class="control-opcion" id="av-teen-m5" name="avatar" type="radio" value="teen-m5"/><label class="avatar-option" for="av-teen-m5" title="Avatar Lucas, masculinos"><strong class="avatar-emoji">🧑🏿‍🔬</strong><strong>Lucas ♂</strong></label><input class="control-opcion" id="av-teen-m6" name="avatar" type="radio" value="teen-m6"/><label class="avatar-option" for="av-teen-m6" title="Avatar Mateo, masculinos"><strong class="avatar-emoji">🧑🏻‍🎓</strong><strong>Mateo ♂</strong></label><input class="control-opcion" id="av-teen-m7" name="avatar" type="radio" value="teen-m7"/><label class="avatar-option" for="av-teen-m7" title="Avatar Thiago, masculinos"><strong class="avatar-emoji">🧑🏼‍🎤</strong><strong>Thiago ♂</strong></label><input class="control-opcion" id="av-teen-m8" name="avatar" type="radio" value="teen-m8"/><label class="avatar-option" for="av-teen-m8" title="Avatar Facu, masculinos"><strong class="avatar-emoji">🧑🏽‍🏫</strong><strong>Facu ♂</strong></label><input class="control-opcion" id="av-teen-m9" name="avatar" type="radio" value="teen-m9"/><label class="avatar-option" for="av-teen-m9" title="Avatar Santi, masculinos"><strong class="avatar-emoji">🧑🏾‍🔧</strong><strong>Santi ♂</strong></label><input class="control-opcion" id="av-teen-m10" name="avatar" type="radio" value="teen-m10"/><label class="avatar-option" for="av-teen-m10" title="Avatar Joa, masculinos"><strong class="avatar-emoji">🧑🏿‍🚒</strong><strong>Joa ♂</strong></label></div>
+<h2>2 · Elegí tu avatar</h2>
+<p class="avatar-help">Hay <strong>20 opciones: 10 masculinas y 10 femeninas</strong>. El símbolo ♂/♀ identifica el perfil visual.</p>
+<div class="avatar-group">
+<h4>10 avatares masculinos</h4><div class="avatar-grid"><input class="control-opcion" id="av-teen-m1" name="avatar" required="" type="radio" value="teen-m1"/><label class="avatar-option" for="av-teen-m1" title="Avatar Axel, masculinos"><strong class="avatar-emoji">🧑🏻‍💻</strong><strong>Axel ♂</strong></label><input class="control-opcion" id="av-teen-m2" name="avatar" type="radio" value="teen-m2"/><label class="avatar-option" for="av-teen-m2" title="Avatar Bruno, masculinos"><strong class="avatar-emoji">🧑🏼‍🎮</strong><strong>Bruno ♂</strong></label><input class="control-opcion" id="av-teen-m3" name="avatar" type="radio" value="teen-m3"/><label class="avatar-option" for="av-teen-m3" title="Avatar Gael, masculinos"><strong class="avatar-emoji">🧑🏽‍🚀</strong><strong>Gael ♂</strong></label><input class="control-opcion" id="av-teen-m4" name="avatar" type="radio" value="teen-m4"/><label class="avatar-option" for="av-teen-m4" title="Avatar Ian, masculinos"><strong class="avatar-emoji">🧑🏾‍🎨</strong><strong>Ian ♂</strong></label><input class="control-opcion" id="av-teen-m5" name="avatar" type="radio" value="teen-m5"/><label class="avatar-option" for="av-teen-m5" title="Avatar Lucas, masculinos"><strong class="avatar-emoji">🧑🏿‍🔬</strong><strong>Lucas ♂</strong></label><input class="control-opcion" id="av-teen-m6" name="avatar" type="radio" value="teen-m6"/><label class="avatar-option" for="av-teen-m6" title="Avatar Mateo, masculinos"><strong class="avatar-emoji">🧑🏻‍🎓</strong><strong>Mateo ♂</strong></label><input class="control-opcion" id="av-teen-m7" name="avatar" type="radio" value="teen-m7"/><label class="avatar-option" for="av-teen-m7" title="Avatar Thiago, masculinos"><strong class="avatar-emoji">🧑🏼‍🎤</strong><strong>Thiago ♂</strong></label><input class="control-opcion" id="av-teen-m8" name="avatar" type="radio" value="teen-m8"/><label class="avatar-option" for="av-teen-m8" title="Avatar Facu, masculinos"><strong class="avatar-emoji">🧑🏽‍🏫</strong><strong>Facu ♂</strong></label><input class="control-opcion" id="av-teen-m9" name="avatar" type="radio" value="teen-m9"/><label class="avatar-option" for="av-teen-m9" title="Avatar Santi, masculinos"><strong class="avatar-emoji">🧑🏾‍🔧</strong><strong>Santi ♂</strong></label><input class="control-opcion" id="av-teen-m10" name="avatar" type="radio" value="teen-m10"/><label class="avatar-option" for="av-teen-m10" title="Avatar Joa, masculinos"><strong class="avatar-emoji">🧑🏿‍🚒</strong><strong>Joa ♂</strong></label></div>
 <h4>10 avatares femeninos</h4><div class="avatar-grid"><input class="control-opcion" id="av-teen-f1" name="avatar" type="radio" value="teen-f1"/><label class="avatar-option" for="av-teen-f1" title="Avatar Alma, femeninos"><strong class="avatar-emoji">👩🏻‍💻</strong><strong>Alma ♀</strong></label><input class="control-opcion" id="av-teen-f2" name="avatar" type="radio" value="teen-f2"/><label class="avatar-option" for="av-teen-f2" title="Avatar Vale, femeninos"><strong class="avatar-emoji">👩🏼‍🎮</strong><strong>Vale ♀</strong></label><input class="control-opcion" id="av-teen-f3" name="avatar" type="radio" value="teen-f3"/><label class="avatar-option" for="av-teen-f3" title="Avatar Marti, femeninos"><strong class="avatar-emoji">👩🏽‍🚀</strong><strong>Marti ♀</strong></label><input class="control-opcion" id="av-teen-f4" name="avatar" type="radio" value="teen-f4"/><label class="avatar-option" for="av-teen-f4" title="Avatar Juli, femeninos"><strong class="avatar-emoji">👩🏾‍🎨</strong><strong>Juli ♀</strong></label><input class="control-opcion" id="av-teen-f5" name="avatar" type="radio" value="teen-f5"/><label class="avatar-option" for="av-teen-f5" title="Avatar Paz, femeninos"><strong class="avatar-emoji">👩🏿‍🔬</strong><strong>Paz ♀</strong></label><input class="control-opcion" id="av-teen-f6" name="avatar" type="radio" value="teen-f6"/><label class="avatar-option" for="av-teen-f6" title="Avatar Mora, femeninos"><strong class="avatar-emoji">👩🏻‍🎓</strong><strong>Mora ♀</strong></label><input class="control-opcion" id="av-teen-f7" name="avatar" type="radio" value="teen-f7"/><label class="avatar-option" for="av-teen-f7" title="Avatar Clara, femeninos"><strong class="avatar-emoji">👩🏼‍🎤</strong><strong>Clara ♀</strong></label><input class="control-opcion" id="av-teen-f8" name="avatar" type="radio" value="teen-f8"/><label class="avatar-option" for="av-teen-f8" title="Avatar Lu, femeninos"><strong class="avatar-emoji">👩🏽‍🏫</strong><strong>Lu ♀</strong></label><input class="control-opcion" id="av-teen-f9" name="avatar" type="radio" value="teen-f9"/><label class="avatar-option" for="av-teen-f9" title="Avatar Agus, femeninos"><strong class="avatar-emoji">👩🏾‍🔧</strong><strong>Agus ♀</strong></label><input class="control-opcion" id="av-teen-f10" name="avatar" type="radio" value="teen-f10"/><label class="avatar-option" for="av-teen-f10" title="Avatar Delfi, femeninos"><strong class="avatar-emoji">👩🏿‍🚒</strong><strong>Delfi ♀</strong></label></div>
-</div><div class="avatar-group avatars-young">
-<div class="avatar-group-title"><h3>Jóvenes · 18 a 29 años</h3><p>Elegí uno de los 20 avatares. El símbolo ♂/♀ identifica el perfil visual.</p></div>
-<h4>10 avatares masculinos</h4><div class="avatar-grid"><input class="control-opcion" id="av-young-m1" name="avatar" type="radio" value="young-m1"/><label class="avatar-option" for="av-young-m1" title="Avatar Kai, masculinos"><strong class="avatar-emoji">👨🏻‍💻</strong><strong>Kai ♂</strong></label><input class="control-opcion" id="av-young-m2" name="avatar" type="radio" value="young-m2"/><label class="avatar-option" for="av-young-m2" title="Avatar Enzo, masculinos"><strong class="avatar-emoji">👨🏼‍🎮</strong><strong>Enzo ♂</strong></label><input class="control-opcion" id="av-young-m3" name="avatar" type="radio" value="young-m3"/><label class="avatar-option" for="av-young-m3" title="Avatar Marco, masculinos"><strong class="avatar-emoji">👨🏽‍🚀</strong><strong>Marco ♂</strong></label><input class="control-opcion" id="av-young-m4" name="avatar" type="radio" value="young-m4"/><label class="avatar-option" for="av-young-m4" title="Avatar Diego, masculinos"><strong class="avatar-emoji">👨🏾‍🎨</strong><strong>Diego ♂</strong></label><input class="control-opcion" id="av-young-m5" name="avatar" type="radio" value="young-m5"/><label class="avatar-option" for="av-young-m5" title="Avatar Omar, masculinos"><strong class="avatar-emoji">👨🏿‍🔬</strong><strong>Omar ♂</strong></label><input class="control-opcion" id="av-young-m6" name="avatar" type="radio" value="young-m6"/><label class="avatar-option" for="av-young-m6" title="Avatar Joel, masculinos"><strong class="avatar-emoji">👨🏻‍🎓</strong><strong>Joel ♂</strong></label><input class="control-opcion" id="av-young-m7" name="avatar" type="radio" value="young-m7"/><label class="avatar-option" for="av-young-m7" title="Avatar Franco, masculinos"><strong class="avatar-emoji">👨🏼‍🎤</strong><strong>Franco ♂</strong></label><input class="control-opcion" id="av-young-m8" name="avatar" type="radio" value="young-m8"/><label class="avatar-option" for="av-young-m8" title="Avatar Rami, masculinos"><strong class="avatar-emoji">👨🏽‍🏫</strong><strong>Rami ♂</strong></label><input class="control-opcion" id="av-young-m9" name="avatar" type="radio" value="young-m9"/><label class="avatar-option" for="av-young-m9" title="Avatar Andrés, masculinos"><strong class="avatar-emoji">👨🏾‍🔧</strong><strong>Andrés ♂</strong></label><input class="control-opcion" id="av-young-m10" name="avatar" type="radio" value="young-m10"/><label class="avatar-option" for="av-young-m10" title="Avatar Malik, masculinos"><strong class="avatar-emoji">👨🏿‍🚒</strong><strong>Malik ♂</strong></label></div>
-<h4>10 avatares femeninos</h4><div class="avatar-grid"><input class="control-opcion" id="av-young-f1" name="avatar" type="radio" value="young-f1"/><label class="avatar-option" for="av-young-f1" title="Avatar Nora, femeninos"><strong class="avatar-emoji">👩🏻‍💻</strong><strong>Nora ♀</strong></label><input class="control-opcion" id="av-young-f2" name="avatar" type="radio" value="young-f2"/><label class="avatar-option" for="av-young-f2" title="Avatar Eva, femeninos"><strong class="avatar-emoji">👩🏼‍🎮</strong><strong>Eva ♀</strong></label><input class="control-opcion" id="av-young-f3" name="avatar" type="radio" value="young-f3"/><label class="avatar-option" for="av-young-f3" title="Avatar Maia, femeninos"><strong class="avatar-emoji">👩🏽‍🚀</strong><strong>Maia ♀</strong></label><input class="control-opcion" id="av-young-f4" name="avatar" type="radio" value="young-f4"/><label class="avatar-option" for="av-young-f4" title="Avatar Sara, femeninos"><strong class="avatar-emoji">👩🏾‍🎨</strong><strong>Sara ♀</strong></label><input class="control-opcion" id="av-young-f5" name="avatar" type="radio" value="young-f5"/><label class="avatar-option" for="av-young-f5" title="Avatar Aisha, femeninos"><strong class="avatar-emoji">👩🏿‍🔬</strong><strong>Aisha ♀</strong></label><input class="control-opcion" id="av-young-f6" name="avatar" type="radio" value="young-f6"/><label class="avatar-option" for="av-young-f6" title="Avatar Iris, femeninos"><strong class="avatar-emoji">👩🏻‍🎓</strong><strong>Iris ♀</strong></label><input class="control-opcion" id="av-young-f7" name="avatar" type="radio" value="young-f7"/><label class="avatar-option" for="av-young-f7" title="Avatar Romi, femeninos"><strong class="avatar-emoji">👩🏼‍🎤</strong><strong>Romi ♀</strong></label><input class="control-opcion" id="av-young-f8" name="avatar" type="radio" value="young-f8"/><label class="avatar-option" for="av-young-f8" title="Avatar Ana, femeninos"><strong class="avatar-emoji">👩🏽‍🏫</strong><strong>Ana ♀</strong></label><input class="control-opcion" id="av-young-f9" name="avatar" type="radio" value="young-f9"/><label class="avatar-option" for="av-young-f9" title="Avatar Belén, femeninos"><strong class="avatar-emoji">👩🏾‍🔧</strong><strong>Belén ♀</strong></label><input class="control-opcion" id="av-young-f10" name="avatar" type="radio" value="young-f10"/><label class="avatar-option" for="av-young-f10" title="Avatar Nadia, femeninos"><strong class="avatar-emoji">👩🏿‍🚒</strong><strong>Nadia ♀</strong></label></div>
-</div><div class="avatar-group avatars-adult">
-<div class="avatar-group-title"><h3>Adultos · 30 años o más</h3><p>Elegí uno de los 20 avatares. El símbolo ♂/♀ identifica el perfil visual.</p></div>
-<h4>10 avatares masculinos</h4><div class="avatar-grid"><input class="control-opcion" id="av-adult-m1" name="avatar" type="radio" value="adult-m1"/><label class="avatar-option" for="av-adult-m1" title="Avatar Héctor, masculinos"><strong class="avatar-emoji">👨🏻‍💼</strong><strong>Héctor ♂</strong></label><input class="control-opcion" id="av-adult-m2" name="avatar" type="radio" value="adult-m2"/><label class="avatar-option" for="av-adult-m2" title="Avatar Raúl, masculinos"><strong class="avatar-emoji">👨🏼‍🏫</strong><strong>Raúl ♂</strong></label><input class="control-opcion" id="av-adult-m3" name="avatar" type="radio" value="adult-m3"/><label class="avatar-option" for="av-adult-m3" title="Avatar Pablo, masculinos"><strong class="avatar-emoji">👨🏽‍💻</strong><strong>Pablo ♂</strong></label><input class="control-opcion" id="av-adult-m4" name="avatar" type="radio" value="adult-m4"/><label class="avatar-option" for="av-adult-m4" title="Avatar Diego, masculinos"><strong class="avatar-emoji">👨🏾‍🔬</strong><strong>Diego ♂</strong></label><input class="control-opcion" id="av-adult-m5" name="avatar" type="radio" value="adult-m5"/><label class="avatar-option" for="av-adult-m5" title="Avatar Malik, masculinos"><strong class="avatar-emoji">👨🏿‍⚕️</strong><strong>Malik ♂</strong></label><input class="control-opcion" id="av-adult-m6" name="avatar" type="radio" value="adult-m6"/><label class="avatar-option" for="av-adult-m6" title="Avatar Carlos, masculinos"><strong class="avatar-emoji">🧔🏻‍♂️</strong><strong>Carlos ♂</strong></label><input class="control-opcion" id="av-adult-m7" name="avatar" type="radio" value="adult-m7"/><label class="avatar-option" for="av-adult-m7" title="Avatar Jorge, masculinos"><strong class="avatar-emoji">🧔🏼‍♂️</strong><strong>Jorge ♂</strong></label><input class="control-opcion" id="av-adult-m8" name="avatar" type="radio" value="adult-m8"/><label class="avatar-option" for="av-adult-m8" title="Avatar Andrés, masculinos"><strong class="avatar-emoji">🧔🏽‍♂️</strong><strong>Andrés ♂</strong></label><input class="control-opcion" id="av-adult-m9" name="avatar" type="radio" value="adult-m9"/><label class="avatar-option" for="av-adult-m9" title="Avatar Luis, masculinos"><strong class="avatar-emoji">🧔🏾‍♂️</strong><strong>Luis ♂</strong></label><input class="control-opcion" id="av-adult-m10" name="avatar" type="radio" value="adult-m10"/><label class="avatar-option" for="av-adult-m10" title="Avatar Samuel, masculinos"><strong class="avatar-emoji">🧔🏿‍♂️</strong><strong>Samuel ♂</strong></label></div>
-<h4>10 avatares femeninos</h4><div class="avatar-grid"><input class="control-opcion" id="av-adult-f1" name="avatar" type="radio" value="adult-f1"/><label class="avatar-option" for="av-adult-f1" title="Avatar Laura, femeninos"><strong class="avatar-emoji">👩🏻‍💼</strong><strong>Laura ♀</strong></label><input class="control-opcion" id="av-adult-f2" name="avatar" type="radio" value="adult-f2"/><label class="avatar-option" for="av-adult-f2" title="Avatar Silvia, femeninos"><strong class="avatar-emoji">👩🏼‍🏫</strong><strong>Silvia ♀</strong></label><input class="control-opcion" id="av-adult-f3" name="avatar" type="radio" value="adult-f3"/><label class="avatar-option" for="av-adult-f3" title="Avatar Mónica, femeninos"><strong class="avatar-emoji">👩🏽‍💻</strong><strong>Mónica ♀</strong></label><input class="control-opcion" id="av-adult-f4" name="avatar" type="radio" value="adult-f4"/><label class="avatar-option" for="av-adult-f4" title="Avatar Celia, femeninos"><strong class="avatar-emoji">👩🏾‍🔬</strong><strong>Celia ♀</strong></label><input class="control-opcion" id="av-adult-f5" name="avatar" type="radio" value="adult-f5"/><label class="avatar-option" for="av-adult-f5" title="Avatar Amina, femeninos"><strong class="avatar-emoji">👩🏿‍⚕️</strong><strong>Amina ♀</strong></label><input class="control-opcion" id="av-adult-f6" name="avatar" type="radio" value="adult-f6"/><label class="avatar-option" for="av-adult-f6" title="Avatar Elena, femeninos"><strong class="avatar-emoji">👩🏻‍🦱</strong><strong>Elena ♀</strong></label><input class="control-opcion" id="av-adult-f7" name="avatar" type="radio" value="adult-f7"/><label class="avatar-option" for="av-adult-f7" title="Avatar Rosa, femeninos"><strong class="avatar-emoji">👩🏼‍🦱</strong><strong>Rosa ♀</strong></label><input class="control-opcion" id="av-adult-f8" name="avatar" type="radio" value="adult-f8"/><label class="avatar-option" for="av-adult-f8" title="Avatar Marta, femeninos"><strong class="avatar-emoji">👩🏽‍🦱</strong><strong>Marta ♀</strong></label><input class="control-opcion" id="av-adult-f9" name="avatar" type="radio" value="adult-f9"/><label class="avatar-option" for="av-adult-f9" title="Avatar Julia, femeninos"><strong class="avatar-emoji">👩🏾‍🦱</strong><strong>Julia ♀</strong></label><input class="control-opcion" id="av-adult-f10" name="avatar" type="radio" value="adult-f10"/><label class="avatar-option" for="av-adult-f10" title="Avatar Fátima, femeninos"><strong class="avatar-emoji">👩🏿‍🦱</strong><strong>Fátima ♀</strong></label></div>
 </div>
-<div class="avatar-wait"><p><i class="bi bi-arrow-up-circle" aria-hidden="true"></i> Elegí primero un grupo de edad para cargar tus avatares.</p></div>
 </section>
 <section class="bloque-registro inicio-partida" data-augmented-ui="tl-clip br-clip border" id="inicio-partida">
-<h2>4 · Confirmá tu perfil</h2>
-<p>Para habilitar el botón necesitás: <strong>nombre + edad + avatar</strong>.</p>
-<button type="button" class="start-button" id="btn-iniciar" data-augmented-ui="tl-clip br-clip border" disabled><i class="bi bi-play-fill" aria-hidden="true"></i> INICIAR PARTIDA</button>
-<p class="registro-faltante" id="registro-faltante" aria-live="polite">Te falta: nombre, grupo de edad y avatar.</p>
+<h2>3 · Confirmá tu perfil</h2>
+<p>Para habilitar el botón necesitás: <strong>nombre + avatar</strong>.</p>
+<button type="submit" class="start-button" id="btn-iniciar" data-augmented-ui="tl-clip br-clip border" disabled><i class="bi bi-play-fill" aria-hidden="true"></i> INICIAR PARTIDA</button>
+<p class="registro-faltante" id="registro-faltante" aria-live="polite">Te falta: nombre y avatar.</p>
 <p class="start-help">Al iniciar la partida, tu perfil quedará visible y entrarás a Primeros pasos. El tiempo todavía no correrá.</p><p class="teclado-help setup-only"><i class="bi bi-keyboard" aria-hidden="true"></i> También podés usar TAB para avanzar por los campos y opciones; en los grupos de radio usá las flechas para cambiar la selección.</p>
 </section>
+</form>
 </div>
-</header>
 
-<div class="navegacion-flotante" aria-label="Navegación vertical rápida">
+<nav class="navegacion-flotante" aria-label="Navegación vertical rápida">
     <a class="nav-float nav-subir nav-subir-registro" href="#registro" title="Subir" aria-label="Subir"><i class="bi bi-chevron-double-up" aria-hidden="true"></i></a>
     <a class="nav-float nav-bajar nav-bajar-registro" href="#inicio-partida" title="Bajar" aria-label="Bajar"><i class="bi bi-chevron-double-down" aria-hidden="true"></i></a>
 
@@ -130,19 +130,19 @@
     <a class="nav-float nav-bajar nav-down-l3" href="#desafio-l3" title="Ir al desafío del Nivel 3" aria-label="Ir al desafío del Nivel 3"><i class="bi bi-chevron-double-down" aria-hidden="true"></i></a>
     <a class="nav-float nav-bajar nav-down-l4" href="#desafio-l4" title="Ir al desafío del Nivel 4" aria-label="Ir al desafío del Nivel 4"><i class="bi bi-chevron-double-down" aria-hidden="true"></i></a>
     <a class="nav-float nav-bajar nav-down-l5" href="#desafio-l5" title="Ir al desafío del Nivel 5" aria-label="Ir al desafío del Nivel 5"><i class="bi bi-chevron-double-down" aria-hidden="true"></i></a>
-</div>
+</nav>
 
 
 <button type="button" class="byte-help-button" id="btn-ayuda" aria-expanded="false" aria-controls="panel-ayuda" title="Mostrar u ocultar ayuda de BYTE">
     <span class="byte-help-icon"><i class="bi bi-robot" aria-hidden="true"></i></span><span class="byte-help-label">AYUDA</span>
 </button>
 
-<aside class="byte-help-panel byte-v8" id="panel-ayuda" aria-label="Asistente BYTE">
+<aside class="byte-help-panel" id="panel-ayuda" aria-label="Asistente BYTE">
     <div class="byte-help-header">
         <div><p class="byte-help-kicker">ASISTENTE EN LÍNEA</p><h2><i class="bi bi-robot" aria-hidden="true"></i> BYTE</h2></div>
         <button type="button" class="byte-help-close" id="btn-cerrar-ayuda" aria-label="Cerrar la ayuda de BYTE">×</button>
     </div>
-    <div class="byte-help-tip help-paso-video"><h3><i class="bi bi-camera-reels-fill" aria-hidden="true"></i> Video inicial</h3><p>Mirá el video completo. Todavía no tenés que resolver nada: solo identificá qué cosas podrían hacerte desconfiar.</p></div>
+    <div class="byte-help-tip help-paso-video"><h3><i class="bi bi-camera-reels-fill" aria-hidden="true"></i> Video inicial</h3><p>Mirá el video completo y leé el informe «¿Qué es el phishing?». Todavía no tenés que resolver nada: solo identificá qué cosas podrían hacerte desconfiar.</p></div>
     <div class="byte-help-tip help-paso-fotos"><h3><i class="bi bi-search" aria-hidden="true"></i> Evidencias</h3><p>Observá remitentes, urgencia, botones y pedidos de datos. No busques memorizar: buscá detalles que te hagan detenerte.</p></div>
     <div class="byte-help-tip help-paso-info"><h3><i class="bi bi-controller" aria-hidden="true"></i> Antes de jugar</h3><p>Revisá vidas, puntaje, gemas y tiempo. Cuando estés listo, iniciá el Nivel 1.</p></div>
     <div class="byte-help-tip help-l1"><h3><span class="tip-num">1</span> Nivel 1</h3><p>Leé cada afirmación pensando en la <strong>urgencia</strong>: ¿te apura para que no verifiques? Recordá: cada error consume una de tus 5 vidas de campaña.</p></div>
@@ -150,7 +150,7 @@
     <div class="byte-help-tip help-l3"><h3><span class="tip-num">3</span> Nivel 3</h3><p>No pruebes un enlace para ver si es seguro. Verificá por una <strong>ruta independiente</strong>.</p></div>
     <div class="byte-help-tip help-l4"><h3><span class="tip-num">4</span> Nivel 4</h3><p>Contraseñas, códigos y datos bancarios son sensibles. Marcá <strong>todos</strong> los que nunca darías por un mensaje, y ninguno más.</p></div>
     <div class="byte-help-tip help-l5"><h3><span class="tip-num">5</span> Nivel 5</h3><p>Combiná todo: <strong>no interactuar → verificar → reportar → eliminar</strong>.</p></div>
-    <div class="byte-help-tip help-win"><h3><i class="bi bi-trophy-fill" aria-hidden="true"></i> Campaña completa</h3><p>Superaste los cinco niveles. Revisá tu resultado final.</p></div>
+    <div class="byte-help-tip help-win"><h3><i class="bi bi-trophy-fill" aria-hidden="true"></i> Campaña completa</h3><p>Desarmaste los cinco ataques de PHISH-X y ganaste el rango de Analista Clic Seguro. Revisá tu certificado.</p></div>
 </aside>
 
 
@@ -170,9 +170,9 @@
     <img src="correos-sospechosos-2.webp" width="1536" height="1024" loading="lazy" decoding="async" alt="Segunda evidencia con ejemplos de phishing"/>
 </aside>
 
-<div class="game-shell game-v8">
+<div class="game-shell">
 
-<nav class="menu-juego menu-v8" id="menu-principal">
+<nav class="menu-juego" id="menu-principal" aria-label="Niveles de la campaña">
     <span class="menu-home menu-status-home"><i class="bi bi-rocket-takeoff-fill" aria-hidden="true"></i> Campaña</span>
     <div class="menu-niveles">
         <a class="menu-level menu-l1" href="#nivel-1"><span>1</span> Urgencia</a>
@@ -185,7 +185,7 @@
 
 <main id="contenido-principal">
 
-<section class="pantalla panel nivel-cero nivel0-v8 primeros-pasos-v9 primeros-pasos-v11" id="primeros-pasos">
+<section class="pantalla panel nivel-cero primeros-pasos" id="primeros-pasos">
 
 
     <!-- PANTALLA 1 · VIDEO -->
@@ -218,6 +218,41 @@
                 <a class="link-video" href="https://www.youtube.com/watch?v=z9c0Ah_KzpY" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube" aria-hidden="true"></i> Abrir en YouTube</a>
             </div>
 
+            <section class="phishing-explicacion" aria-labelledby="titulo-que-es-phishing">
+                <p class="caso-kicker">INFORME DE BYTE · EL ARMA DE PHISH-X</p>
+                <h3 id="titulo-que-es-phishing"><i class="bi bi-envelope-exclamation-fill" aria-hidden="true"></i> ¿Qué es el phishing?</h3>
+                <p class="phishing-definicion">El <strong>phishing</strong> es un engaño en el que alguien <strong>se hace pasar por una empresa, un banco, tu escuela o una persona conocida</strong> para que hagas clic en un enlace, descargues un archivo o entregues datos como contraseñas o códigos. El nombre viene del inglés <em>fishing</em>, «pescar»: el mensaje es el anzuelo y vos sos el pez que quieren atrapar.</p>
+
+                <div class="phishing-pasos">
+                    <article>
+                        <p class="phishing-paso-num">1</p>
+                        <h4><i class="bi bi-envelope-fill" aria-hidden="true"></i> El anzuelo</h4>
+                        <p>Llega un mensaje que parece real: un correo, un SMS, un WhatsApp o un mensaje en redes.</p>
+                    </article>
+                    <article>
+                        <p class="phishing-paso-num">2</p>
+                        <h4><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i> La presión</h4>
+                        <p>Te apura, te asusta o te promete un premio para que actúes sin pensar.</p>
+                    </article>
+                    <article>
+                        <p class="phishing-paso-num">3</p>
+                        <h4><i class="bi bi-bug-fill" aria-hidden="true"></i> La trampa</h4>
+                        <p>Te lleva a una página falsa o te pide datos. Si los entregás, quedan en manos de quien te engañó.</p>
+                    </article>
+                </div>
+
+                <p class="phishing-riesgo"><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> <strong>¿Por qué es peligroso?</strong> Con tus datos pueden entrar a tus cuentas, escribirles a tus contactos haciéndose pasar por vos o usar tu tarjeta para pagar.</p>
+
+                <h4 class="phishing-senales-titulo">Las 4 señales que vas a entrenar</h4>
+                <ul class="phishing-senales">
+                    <li><span>1</span><p><strong>Urgencia</strong> que no te deja pensar.</p></li>
+                    <li><span>2</span><p><strong>Remitente</strong> que imita a uno conocido.</p></li>
+                    <li><span>3</span><p><strong>Enlace</strong> que no lleva a donde dice.</p></li>
+                    <li><span>4</span><p><strong>Pedido de datos</strong> sensibles.</p></li>
+                </ul>
+                <p class="phishing-cierre">En el <strong>Nivel 5</strong> PHISH-X combina las cuatro y vas a aplicar el protocolo completo.</p>
+            </section>
+
             <div class="stage-action">
                 <button type="button" class="stage-next-button" id="btn-ir-evidencias" data-augmented-ui="tl-clip br-clip border">
                     CONTINUAR A LAS EVIDENCIAS <span><i class="bi bi-arrow-down" aria-hidden="true"></i></span>
@@ -244,7 +279,7 @@
             </header>
 
             <div class="evidence-screen-grid">
-                <article class="evidence-card-v11" data-augmented-ui="tl-clip br-clip border">
+                <article class="evidence-card" data-augmented-ui="tl-clip br-clip border">
                     <img src="correos-sospechosos-1.webp" width="1536" height="1024" decoding="async" alt="Dos correos sospechosos con urgencia, remitentes extraños y pedidos de información."/>
                     <div>
                         <span>EVIDENCIA 01</span>
@@ -252,7 +287,7 @@
                     </div>
                 </article>
 
-                <article class="evidence-card-v11" data-augmented-ui="tl-clip br-clip border">
+                <article class="evidence-card" data-augmented-ui="tl-clip br-clip border">
                     <img src="correos-sospechosos-2.webp" width="1536" height="1024" decoding="async" alt="Dos correos sospechosos que imitan servicios conocidos y utilizan enlaces de verificación."/>
                     <div>
                         <span>EVIDENCIA 02</span>
@@ -261,7 +296,7 @@
                 </article>
             </div>
 
-            <article class="evidence-question-v11">
+            <article class="evidence-question">
                 <span><i class="bi bi-lightbulb-fill" aria-hidden="true"></i></span>
                 <p><strong>No hace falta responder todavía.</strong> Solo guardá esta pregunta: si uno de estos mensajes llegara ahora, ¿harías clic?</p>
             </article>
@@ -291,7 +326,7 @@
                 <p>Esto es todo lo que necesitás saber. El reloj todavía está detenido.</p>
             </header>
 
-            <div class="reglas-v8-grid reglas-v11-grid">
+            <div class="reglas-grid">
                 <article>
                     <span><i class="bi bi-heart-fill ico-vida" aria-hidden="true"></i></span>
                     <h3>5 vidas para toda la campaña</h3>
@@ -300,7 +335,7 @@
                 <article>
                     <span><i class="bi bi-heartbreak-fill ico-peligro" aria-hidden="true"></i></span>
                     <h3>Podés perder en cualquier nivel</h3>
-                    <p>Cuando el contador llega a <strong>0 vidas</strong>, la campaña termina. Volvés a <strong>Cómo funciona la partida</strong>, conservando tu nombre, avatar y edad.</p>
+                    <p>Cuando el contador llega a <strong>0 vidas</strong>, la campaña termina. Volvés a <strong>Cómo funciona la partida</strong>, conservando tu nombre y tu avatar.</p>
                 </article>
                 <article>
                     <span><i class="bi bi-trophy-fill ico-trofeo" aria-hidden="true"></i></span>
@@ -324,9 +359,9 @@
                 </article>
             </div>
 
-            <div class="mapa-v8 mapa-v11">
+            <div class="mapa">
                 <h3><i class="bi bi-map-fill" aria-hidden="true"></i> Tu campaña · 5 niveles</h3>
-                <div class="ruta-v8">
+                <div class="ruta">
                     <a class="ruta-node node-l1" href="#nivel-1"><span class="node-badge"><span class="node-num">1</span><span class="node-check">✓</span></span><strong>Urgencia</strong><small>Fácil · V o F</small></a>
                     <a class="ruta-node node-l2 bloqueado" href="#nivel-2"><span class="node-badge"><span class="node-num">2</span><span class="node-check">✓</span></span><strong>Remitente</strong><small>Medio · Escribir</small></a>
                     <a class="ruta-node node-l3 bloqueado" href="#nivel-3"><span class="node-badge"><span class="node-num">3</span><span class="node-check">✓</span></span><strong>Enlaces</strong><small>Medio + · Elegir</small></a>
@@ -335,23 +370,22 @@
                 </div>
             </div>
 
-            <div id="primeros-pasos-final"></div>
-            <button type="button" class="start-level-button start-level-v11" id="btn-iniciar-nivel1" data-augmented-ui="tl-clip br-clip border">
+            <button type="button" class="start-level-button" id="btn-iniciar-nivel1" data-augmented-ui="tl-clip br-clip border">
                 <i class="bi bi-play-fill" aria-hidden="true"></i> INICIAR PARTIDA · NIVEL 1
             </button>
         </div>
     </div>
 </section>
 
-<div class="campania-v8 campania-v12">
+<div class="campania">
 
 
-<section class="level-stage-v12 level-stage-1 accent-cyan" id="nivel-1" aria-labelledby="titulo-nivel-1">
+<section class="level-stage level-stage-1 accent-cyan" id="nivel-1" aria-labelledby="titulo-nivel-1">
     <div class="level-stage-scroll" id="nivel-1-top">
         <div class="level-watermark">01</div>
 
-        <header class="level-hero-v12" data-augmented-ui="tl-clip br-clip border">
-            <div class="level-rank-v12">
+        <header class="level-hero" data-augmented-ui="tl-clip br-clip border">
+            <div class="level-rank">
                 <span>NIVEL 1 DE 5</span>
                 <strong>FÁCIL</strong>
             </div>
@@ -366,13 +400,13 @@
             </div>
         </header>
 
-        <div class="level-flow-v12">
+        <div class="level-flow">
             <span class="active">1 · ENTRENAMIENTO</span>
             <span>2 · CASO</span>
             <span>3 · DECISIÓN</span>
         </div>
 
-        <article class="material-nivel material-v8 level-training-v12" data-augmented-ui="tl-clip br-clip border">
+        <article class="material-nivel level-training" data-augmented-ui="tl-clip br-clip border">
             <div class="material-cabecera">
                 <p class="material-icono"><i class="bi bi-pause-circle-fill" aria-hidden="true"></i></p>
                 <div>
@@ -381,24 +415,36 @@
                 </div>
             </div>
             <p>Los mensajes de phishing suelen apurarte para que actúes sin pensar. La primera defensa es detenerte y verificar por un canal oficial.</p>
-            <p class="regla-nivel-v8">PARÁ → NO USES EL ENLACE → VERIFICÁ POR LA APP O SITIO OFICIAL.</p>
+            <p class="regla-nivel">PARÁ → NO USES EL ENLACE → VERIFICÁ POR LA APP O SITIO OFICIAL.</p>
         </article>
 
-        <article class="caso-v8 level-case-v12" data-augmented-ui="tr-clip bl-clip border">
-            <p class="caso-kicker">CASO DEL NIVEL 1</p>
-            <p>Recibís: “URGENTE. Tu cuenta será suspendida en 10 minutos. Verificá tus datos ahora”. Remitente: soporte-seguridad@cuenta-verifica.net</p>
+        <article class="caso level-case" data-augmented-ui="tr-clip bl-clip border">
+            <p class="caso-kicker">CASO DEL NIVEL 1 · MENSAJE INTERCEPTADO</p>
+            <p>Primer ataque de PHISH-X: este correo llegó a varias casillas de tu escuela. BYTE lo interceptó antes de que alguien hiciera clic.</p>
+            <figure class="mensaje-simulado">
+                <div class="mensaje-cabecera">
+                    <p><span>De:</span> Soporte de Seguridad &lt;soporte-seguridad@cuenta-verifica.net&gt;</p>
+                    <p><span>Asunto:</span> URGENTE: tu cuenta será suspendida</p>
+                </div>
+                <div class="mensaje-cuerpo">
+                    <p>Tu cuenta será suspendida en 10 minutos. Verificá tus datos ahora para no perder el acceso.</p>
+                    <span class="mensaje-boton">Verificar ahora</span>
+                </div>
+                <figcaption><i class="bi bi-info-circle" aria-hidden="true"></i> Recreación de un mensaje de phishing para entrenar. No es un correo real.</figcaption>
+            </figure>
         </article>
 
 
-        <article class="desafio-v8 level-challenge-v12" id="desafio-l1">
+        <article class="desafio level-challenge" id="desafio-l1">
             <div class="desafio-top">
                 <div>
                     <p class="caso-kicker">TU DECISIÓN · VERDADERO O FALSO</p>
                     <h3>¿Verdadero o falso?</h3>
-                    <p class="feedback-instruction-v14">Respondé las <strong>cuatro afirmaciones</strong> y tocá <strong>COMPROBAR</strong>. Si algo falla, BYTE te explica <strong>por qué</strong> y perdés 1 vida.</p>
+                    <p class="feedback-instruction">Respondé las <strong>cuatro afirmaciones</strong> y tocá <strong>COMPROBAR</strong>. Si algo falla, BYTE te explica <strong>por qué</strong> y perdés 1 vida.</p>
                 </div>
-                <div class="intentos-v8">
-                    <strong>Intento <span class="attempt-dynamic" id="intento-l1">1</span> de 5</strong>
+                <div class="intentos">
+                    <strong>Intento <span class="attempt-dynamic" id="intento-l1">1</span></strong>
+                    <small>Vidas de campaña: <span class="vidas-valor">5</span> de 5</small>
                     <small>Premio posible: <span class="reward-dynamic" id="premio-l1">100 puntos</span></small>
                 </div>
             </div>
@@ -446,11 +492,11 @@
                 </div>
             </form>
 
-            <div class="feedback feedback-bien feedback-l1-bien level-complete-v12">
+            <div class="feedback feedback-bien feedback-l1-bien level-complete">
                 <div class="completion-check">✓</div>
                 <p class="caso-kicker">NIVEL 1 COMPLETADO</p>
                 <h3>Frená la urgencia · superado</h3>
-                <p>Detuviste la urgencia y verificaste sin entrar al enlace recibido.</p>
+                <p>PHISH-X no logró apurarte: detuviste la urgencia y verificaste sin entrar al enlace recibido.</p>
                 <div class="completion-rewards">
                     <span><i class="bi bi-trophy-fill ico-trofeo" aria-hidden="true"></i> <strong class="level-score score-l1" id="puntos-l1"></strong></span>
                     <span><i class="bi bi-gem ico-gema" aria-hidden="true"></i> +1 gema</span>
@@ -462,12 +508,12 @@
     </div>
 </section>
 
-<section class="level-stage-v12 level-stage-2 accent-purple" id="nivel-2" aria-labelledby="titulo-nivel-2">
+<section class="level-stage level-stage-2 accent-purple" id="nivel-2" aria-labelledby="titulo-nivel-2">
     <div class="level-stage-scroll" id="nivel-2-top">
         <div class="level-watermark">02</div>
 
-        <header class="level-hero-v12" data-augmented-ui="tl-clip br-clip border">
-            <div class="level-rank-v12">
+        <header class="level-hero" data-augmented-ui="tl-clip br-clip border">
+            <div class="level-rank">
                 <span>NIVEL 2 DE 5</span>
                 <strong>MEDIO</strong>
             </div>
@@ -482,13 +528,13 @@
             </div>
         </header>
 
-        <div class="level-flow-v12">
+        <div class="level-flow">
             <span class="active">1 · ENTRENAMIENTO</span>
             <span>2 · CASO</span>
             <span>3 · DECISIÓN</span>
         </div>
 
-        <article class="material-nivel material-v8 level-training-v12" data-augmented-ui="tl-clip br-clip border">
+        <article class="material-nivel level-training" data-augmented-ui="tl-clip br-clip border">
             <div class="material-cabecera">
                 <p class="material-icono"><i class="bi bi-upc-scan" aria-hidden="true"></i></p>
                 <div>
@@ -497,24 +543,36 @@
                 </div>
             </div>
             <p>Un logo conocido no garantiza que el mensaje sea real. Mirá la dirección completa del remitente y compará el dominio con el servicio verdadero.</p>
-            <p class="regla-nivel-v8">EL NOMBRE PUEDE ENGAÑAR. LA DIRECCIÓN COMPLETA DA MÁS PISTAS.</p>
+            <p class="regla-nivel">EL NOMBRE PUEDE ENGAÑAR. LA DIRECCIÓN COMPLETA DA MÁS PISTAS.</p>
         </article>
 
-        <article class="caso-v8 level-case-v12" data-augmented-ui="tr-clip bl-clip border">
-            <p class="caso-kicker">CASO DEL NIVEL 2</p>
-            <p>Un correo dice ser de Microsoft, pero llega desde: soporte-cuentas@micr0soft-seguro.com</p>
+        <article class="caso level-case" data-augmented-ui="tr-clip bl-clip border">
+            <p class="caso-kicker">CASO DEL NIVEL 2 · MENSAJE INTERCEPTADO</p>
+            <p>La urgencia no te frenó, así que PHISH-X cambió de disfraz: ahora firma como Microsoft. El nombre parece correcto, pero mirá de dónde llega.</p>
+            <figure class="mensaje-simulado">
+                <div class="mensaje-cabecera">
+                    <p><span>De:</span> Microsoft &lt;soporte-cuentas@micr0soft-seguro.com&gt;</p>
+                    <p><span>Asunto:</span> Actividad inusual en tu cuenta</p>
+                </div>
+                <div class="mensaje-cuerpo">
+                    <p>Detectamos un inicio de sesión desde otro país. Confirmá tu identidad para mantener tu cuenta protegida.</p>
+                    <span class="mensaje-boton">Confirmar identidad</span>
+                </div>
+                <figcaption><i class="bi bi-info-circle" aria-hidden="true"></i> Recreación de un mensaje de phishing para entrenar. No es un correo real.</figcaption>
+            </figure>
         </article>
 
 
-        <article class="desafio-v8 level-challenge-v12" id="desafio-l2">
+        <article class="desafio level-challenge" id="desafio-l2">
             <div class="desafio-top">
                 <div>
                     <p class="caso-kicker">TU DECISIÓN · RESPUESTA ESCRITA</p>
                     <h3>¿Cuál es el dominio verdadero?</h3>
-                    <p class="feedback-instruction-v14">Escribí tu respuesta y tocá <strong>COMPROBAR</strong>. No importan las mayúsculas ni los espacios de más. Si algo falla, BYTE te explica <strong>por qué</strong> y perdés 1 vida.</p>
+                    <p class="feedback-instruction">Escribí tu respuesta y tocá <strong>COMPROBAR</strong>. No importan las mayúsculas ni los espacios de más. Si algo falla, BYTE te explica <strong>por qué</strong> y perdés 1 vida.</p>
                 </div>
-                <div class="intentos-v8">
-                    <strong>Intento <span class="attempt-dynamic" id="intento-l2">1</span> de 5</strong>
+                <div class="intentos">
+                    <strong>Intento <span class="attempt-dynamic" id="intento-l2">1</span></strong>
+                    <small>Vidas de campaña: <span class="vidas-valor">5</span> de 5</small>
                     <small>Premio posible: <span class="reward-dynamic" id="premio-l2">100 puntos</span></small>
                 </div>
             </div>
@@ -535,11 +593,11 @@
                 </div>
             </form>
 
-            <div class="feedback feedback-bien feedback-l2-bien level-complete-v12">
+            <div class="feedback feedback-bien feedback-l2-bien level-complete">
                 <div class="completion-check">✓</div>
                 <p class="caso-kicker">NIVEL 2 COMPLETADO</p>
                 <h3>Descubrí al impostor · superado</h3>
-                <p>Detectaste una dirección que intenta parecer legítima sin serlo.</p>
+                <p>Le sacaste el disfraz a PHISH-X: detectaste una dirección que intenta parecer legítima sin serlo.</p>
                 <div class="completion-rewards">
                     <span><i class="bi bi-trophy-fill ico-trofeo" aria-hidden="true"></i> <strong class="level-score score-l2" id="puntos-l2"></strong></span>
                     <span><i class="bi bi-gem ico-gema" aria-hidden="true"></i> +1 gema</span>
@@ -551,12 +609,12 @@
     </div>
 </section>
 
-<section class="level-stage-v12 level-stage-3 accent-gold" id="nivel-3" aria-labelledby="titulo-nivel-3">
+<section class="level-stage level-stage-3 accent-gold" id="nivel-3" aria-labelledby="titulo-nivel-3">
     <div class="level-stage-scroll" id="nivel-3-top">
         <div class="level-watermark">03</div>
 
-        <header class="level-hero-v12" data-augmented-ui="tl-clip br-clip border">
-            <div class="level-rank-v12">
+        <header class="level-hero" data-augmented-ui="tl-clip br-clip border">
+            <div class="level-rank">
                 <span>NIVEL 3 DE 5</span>
                 <strong>MEDIO +</strong>
             </div>
@@ -571,13 +629,13 @@
             </div>
         </header>
 
-        <div class="level-flow-v12">
+        <div class="level-flow">
             <span class="active">1 · ENTRENAMIENTO</span>
             <span>2 · CASO</span>
             <span>3 · DECISIÓN</span>
         </div>
 
-        <article class="material-nivel material-v8 level-training-v12" data-augmented-ui="tl-clip br-clip border">
+        <article class="material-nivel level-training" data-augmented-ui="tl-clip br-clip border">
             <div class="material-cabecera">
                 <p class="material-icono"><i class="bi bi-radar" aria-hidden="true"></i></p>
                 <div>
@@ -586,24 +644,36 @@
                 </div>
             </div>
             <p>El texto de un botón puede decir una cosa y llevar a otra. No necesitás hacer clic para verificar: abrí el sitio oficial por tu cuenta.</p>
-            <p class="regla-nivel-v8">NO CONFÍES EN EL TEXTO DEL BOTÓN. VERIFICÁ EL DESTINO POR OTRO CAMINO.</p>
+            <p class="regla-nivel">NO CONFÍES EN EL TEXTO DEL BOTÓN. VERIFICÁ EL DESTINO POR OTRO CAMINO.</p>
         </article>
 
-        <article class="caso-v8 level-case-v12" data-augmented-ui="tr-clip bl-clip border">
-            <p class="caso-kicker">CASO DEL NIVEL 3</p>
-            <p>Un mensaje de una supuesta empresa de envíos dice: “Tu paquete está retenido. Actualizá tus datos ahora” y ofrece un botón para continuar.</p>
+        <article class="caso level-case" data-augmented-ui="tr-clip bl-clip border">
+            <p class="caso-kicker">CASO DEL NIVEL 3 · MENSAJE INTERCEPTADO</p>
+            <p>Descubriste su disfraz, así que PHISH-X pasó al celular: manda un SMS de una supuesta empresa de envíos con un botón para «continuar».</p>
+            <figure class="mensaje-simulado mensaje-sms">
+                <div class="mensaje-cabecera">
+                    <p><span>SMS de:</span> PaqueRápido</p>
+                </div>
+                <div class="mensaje-cuerpo">
+                    <p>Tu paquete está retenido en el depósito. Actualizá tus datos ahora para recibirlo hoy.</p>
+                    <span class="mensaje-boton">Seguimiento oficial</span>
+                    <p class="mensaje-destino"><i class="bi bi-link-45deg" aria-hidden="true"></i> El botón dice «oficial», pero lleva a: paquerapido-retenidos.click/datos</p>
+                </div>
+                <figcaption><i class="bi bi-info-circle" aria-hidden="true"></i> Recreación de un mensaje de phishing para entrenar. La empresa es inventada.</figcaption>
+            </figure>
         </article>
 
 
-        <article class="desafio-v8 level-challenge-v12" id="desafio-l3">
+        <article class="desafio level-challenge" id="desafio-l3">
             <div class="desafio-top">
                 <div>
                     <p class="caso-kicker">TU DECISIÓN · MÚLTIPLE OPCIÓN</p>
                     <h3>¿Cuál es la acción más segura?</h3>
-                    <p class="feedback-instruction-v14">Elegí una opción y tocá <strong>COMPROBAR</strong>. Si algo falla, BYTE te explica <strong>por qué</strong> y perdés 1 vida.</p>
+                    <p class="feedback-instruction">Elegí una opción y tocá <strong>COMPROBAR</strong>. Si algo falla, BYTE te explica <strong>por qué</strong> y perdés 1 vida.</p>
                 </div>
-                <div class="intentos-v8">
-                    <strong>Intento <span class="attempt-dynamic" id="intento-l3">1</span> de 5</strong>
+                <div class="intentos">
+                    <strong>Intento <span class="attempt-dynamic" id="intento-l3">1</span></strong>
+                    <small>Vidas de campaña: <span class="vidas-valor">5</span> de 5</small>
                     <small>Premio posible: <span class="reward-dynamic" id="premio-l3">100 puntos</span></small>
                 </div>
             </div>
@@ -628,11 +698,11 @@
                 </div>
             </form>
 
-            <div class="feedback feedback-bien feedback-l3-bien level-complete-v12">
+            <div class="feedback feedback-bien feedback-l3-bien level-complete">
                 <div class="completion-check">✓</div>
                 <p class="caso-kicker">NIVEL 3 COMPLETADO</p>
                 <h3>Evitá el enlace trampa · superado</h3>
-                <p>Evitaste probar el enlace y comprobaste la situación desde una fuente independiente.</p>
+                <p>El enlace trampa de PHISH-X quedó sin víctimas: no lo probaste y comprobaste la situación desde una fuente independiente.</p>
                 <div class="completion-rewards">
                     <span><i class="bi bi-trophy-fill ico-trofeo" aria-hidden="true"></i> <strong class="level-score score-l3" id="puntos-l3"></strong></span>
                     <span><i class="bi bi-gem ico-gema" aria-hidden="true"></i> +1 gema</span>
@@ -644,12 +714,12 @@
     </div>
 </section>
 
-<section class="level-stage-v12 level-stage-4 accent-pink" id="nivel-4" aria-labelledby="titulo-nivel-4">
+<section class="level-stage level-stage-4 accent-pink" id="nivel-4" aria-labelledby="titulo-nivel-4">
     <div class="level-stage-scroll" id="nivel-4-top">
         <div class="level-watermark">04</div>
 
-        <header class="level-hero-v12" data-augmented-ui="tl-clip br-clip border">
-            <div class="level-rank-v12">
+        <header class="level-hero" data-augmented-ui="tl-clip br-clip border">
+            <div class="level-rank">
                 <span>NIVEL 4 DE 5</span>
                 <strong>DIFÍCIL</strong>
             </div>
@@ -664,13 +734,13 @@
             </div>
         </header>
 
-        <div class="level-flow-v12">
+        <div class="level-flow">
             <span class="active">1 · ENTRENAMIENTO</span>
             <span>2 · CASO</span>
             <span>3 · DECISIÓN</span>
         </div>
 
-        <article class="material-nivel material-v8 level-training-v12" data-augmented-ui="tl-clip br-clip border">
+        <article class="material-nivel level-training" data-augmented-ui="tl-clip br-clip border">
             <div class="material-cabecera">
                 <p class="material-icono"><i class="bi bi-shield-fill-check" aria-hidden="true"></i></p>
                 <div>
@@ -679,24 +749,40 @@
                 </div>
             </div>
             <p>Contraseñas, códigos de verificación y datos bancarios son información sensible. Un pedido inesperado de esos datos es una señal fuerte de alerta.</p>
-            <p class="regla-nivel-v8">DATOS SENSIBLES + PEDIDO INESPERADO = DETENERSE Y VERIFICAR.</p>
+            <p class="regla-nivel">DATOS SENSIBLES + PEDIDO INESPERADO = DETENERSE Y VERIFICAR.</p>
         </article>
 
-        <article class="caso-v8 level-case-v12" data-augmented-ui="tr-clip bl-clip border">
-            <p class="caso-kicker">CASO DEL NIVEL 4</p>
-            <p>Un mensaje informa una factura pendiente y solicita número de tarjeta, código de seguridad y contraseña para evitar un recargo.</p>
+        <article class="caso level-case" data-augmented-ui="tr-clip bl-clip border">
+            <p class="caso-kicker">CASO DEL NIVEL 4 · MENSAJE INTERCEPTADO</p>
+            <p>Como sus enlaces ya no te engañan, PHISH-X va directo a lo que quiere: tus datos. Inventa una factura pendiente y te pide que completes todo en el mismo mensaje.</p>
+            <figure class="mensaje-simulado">
+                <div class="mensaje-cabecera">
+                    <p><span>De:</span> Facturación &lt;cobros@factura-pendiente-pagos.com&gt;</p>
+                    <p><span>Asunto:</span> Factura impaga: evitá el recargo</p>
+                </div>
+                <div class="mensaje-cuerpo">
+                    <p>Tenés una factura pendiente. Para evitar un recargo, respondé hoy con estos datos:</p>
+                    <ul class="mensaje-campos">
+                        <li>Número de tarjeta: <span></span></li>
+                        <li>Código de seguridad: <span></span></li>
+                        <li>Contraseña: <span></span></li>
+                    </ul>
+                </div>
+                <figcaption><i class="bi bi-info-circle" aria-hidden="true"></i> Recreación de un mensaje de phishing para entrenar. No es un correo real.</figcaption>
+            </figure>
         </article>
 
 
-        <article class="desafio-v8 level-challenge-v12" id="desafio-l4">
+        <article class="desafio level-challenge" id="desafio-l4">
             <div class="desafio-top">
                 <div>
                     <p class="caso-kicker">TU DECISIÓN · CASILLAS</p>
                     <h3>¿Qué datos NUNCA compartirías por un mensaje así?</h3>
-                    <p class="feedback-instruction-v14">Marcá todos los datos sensibles y tocá <strong>COMPROBAR</strong>. Si algo falla, BYTE te explica <strong>por qué</strong> y perdés 1 vida.</p>
+                    <p class="feedback-instruction">Marcá todos los datos sensibles y tocá <strong>COMPROBAR</strong>. Si algo falla, BYTE te explica <strong>por qué</strong> y perdés 1 vida.</p>
                 </div>
-                <div class="intentos-v8">
-                    <strong>Intento <span class="attempt-dynamic" id="intento-l4">1</span> de 5</strong>
+                <div class="intentos">
+                    <strong>Intento <span class="attempt-dynamic" id="intento-l4">1</span></strong>
+                    <small>Vidas de campaña: <span class="vidas-valor">5</span> de 5</small>
                     <small>Premio posible: <span class="reward-dynamic" id="premio-l4">100 puntos</span></small>
                 </div>
             </div>
@@ -721,11 +807,11 @@
                 </div>
             </form>
 
-            <div class="feedback feedback-bien feedback-l4-bien level-complete-v12">
+            <div class="feedback feedback-bien feedback-l4-bien level-complete">
                 <div class="completion-check">✓</div>
                 <p class="caso-kicker">NIVEL 4 COMPLETADO</p>
                 <h3>Protegé tus datos · superado</h3>
-                <p>Protegiste información sensible y evitaste compartirla por un canal no verificado.</p>
+                <p>PHISH-X se quedó con las manos vacías: protegiste información sensible y no la compartiste por un canal no verificado.</p>
                 <div class="completion-rewards">
                     <span><i class="bi bi-trophy-fill ico-trofeo" aria-hidden="true"></i> <strong class="level-score score-l4" id="puntos-l4"></strong></span>
                     <span><i class="bi bi-gem ico-gema" aria-hidden="true"></i> +1 gema</span>
@@ -737,12 +823,12 @@
     </div>
 </section>
 
-<section class="level-stage-v12 level-stage-5 accent-green" id="nivel-5" aria-labelledby="titulo-nivel-5">
+<section class="level-stage level-stage-5 accent-green" id="nivel-5" aria-labelledby="titulo-nivel-5">
     <div class="level-stage-scroll" id="nivel-5-top">
         <div class="level-watermark">05</div>
 
-        <header class="level-hero-v12" data-augmented-ui="tl-clip br-clip border">
-            <div class="level-rank-v12">
+        <header class="level-hero" data-augmented-ui="tl-clip br-clip border">
+            <div class="level-rank">
                 <span>NIVEL 5 DE 5</span>
                 <strong>EXPERTO</strong>
             </div>
@@ -757,13 +843,13 @@
             </div>
         </header>
 
-        <div class="level-flow-v12">
+        <div class="level-flow">
             <span class="active">1 · ENTRENAMIENTO</span>
             <span>2 · CASO</span>
             <span>3 · DECISIÓN</span>
         </div>
 
-        <article class="material-nivel material-v8 level-training-v12" data-augmented-ui="tl-clip br-clip border">
+        <article class="material-nivel level-training" data-augmented-ui="tl-clip br-clip border">
             <div class="material-cabecera">
                 <p class="material-icono"><i class="bi bi-list-check" aria-hidden="true"></i></p>
                 <div>
@@ -772,24 +858,36 @@
                 </div>
             </div>
             <p>Cuando varias señales aparecen juntas, aplicá un protocolo simple: no interactuar, verificar por un canal oficial, reportar si corresponde y eliminar.</p>
-            <p class="regla-nivel-v8">NO INTERACTUAR → VERIFICAR → REPORTAR → ELIMINAR.</p>
+            <p class="regla-nivel">NO INTERACTUAR → VERIFICAR → REPORTAR → ELIMINAR.</p>
         </article>
 
-        <article class="caso-v8 level-case-v12" data-augmented-ui="tr-clip bl-clip border">
-            <p class="caso-kicker">CASO DEL NIVEL 5</p>
-            <p>PHISH-X combina urgencia, remitente imitado, enlace de verificación y pedido de datos en un mismo mensaje.</p>
+        <article class="caso level-case" data-augmented-ui="tr-clip bl-clip border">
+            <p class="caso-kicker">CASO DEL NIVEL 5 · ATAQUE FINAL</p>
+            <p>Es el último intento de PHISH-X: junta en un mismo mensaje urgencia, remitente imitado, enlace de verificación y pedido de datos. Si aplicás el protocolo, desarmás toda la operación.</p>
+            <figure class="mensaje-simulado">
+                <div class="mensaje-cabecera">
+                    <p><span>De:</span> TuBanco Digital &lt;alertas@tubanco-verificacion-segura.com&gt;</p>
+                    <p><span>Asunto:</span> ÚLTIMO AVISO: bloqueo en 15 minutos</p>
+                </div>
+                <div class="mensaje-cuerpo">
+                    <p>Detectamos un pago no autorizado. Para cancelarlo, ingresá con tu usuario, tu contraseña y el código que te enviamos por SMS.</p>
+                    <span class="mensaje-boton">Cancelar el pago</span>
+                </div>
+                <figcaption><i class="bi bi-info-circle" aria-hidden="true"></i> Recreación de un mensaje de phishing para entrenar. El banco es inventado.</figcaption>
+            </figure>
         </article>
 
 
-        <article class="desafio-v8 level-challenge-v12" id="desafio-l5">
+        <article class="desafio level-challenge" id="desafio-l5">
             <div class="desafio-top">
                 <div>
                     <p class="caso-kicker">TU DECISIÓN · ORDENAR PASOS</p>
                     <h3>¿En qué orden aplicás el protocolo?</h3>
-                    <p class="feedback-instruction-v14">Completá los cuatro pasos y tocá <strong>COMPROBAR</strong>. Si algo falla, BYTE te explica <strong>por qué</strong> y perdés 1 vida.</p>
+                    <p class="feedback-instruction">Completá los cuatro pasos y tocá <strong>COMPROBAR</strong>. Si algo falla, BYTE te explica <strong>por qué</strong> y perdés 1 vida.</p>
                 </div>
-                <div class="intentos-v8">
-                    <strong>Intento <span class="attempt-dynamic" id="intento-l5">1</span> de 5</strong>
+                <div class="intentos">
+                    <strong>Intento <span class="attempt-dynamic" id="intento-l5">1</span></strong>
+                    <small>Vidas de campaña: <span class="vidas-valor">5</span> de 5</small>
                     <small>Premio posible: <span class="reward-dynamic" id="premio-l5">100 puntos</span></small>
                 </div>
             </div>
@@ -814,11 +912,11 @@
                 </div>
             </form>
 
-            <div class="feedback feedback-bien feedback-l5-bien level-complete-v12">
+            <div class="feedback feedback-bien feedback-l5-bien level-complete">
                 <div class="completion-check">✓</div>
                 <p class="caso-kicker">NIVEL 5 COMPLETADO</p>
                 <h3>Operación Clic Seguro · superado</h3>
-                <p>Aplicaste el protocolo completo y cerraste la campaña con una decisión segura.</p>
+                <p>Operación desarmada: aplicaste el protocolo completo y PHISH-X ya no tiene trucos contra vos.</p>
                 <div class="completion-rewards">
                     <span><i class="bi bi-trophy-fill ico-trofeo" aria-hidden="true"></i> <strong class="level-score score-l5" id="puntos-l5"></strong></span>
                     <span><i class="bi bi-gem ico-gema" aria-hidden="true"></i> +1 gema</span>
@@ -831,47 +929,47 @@
 </section>
 
 
-<section class="victory-screen-v12 victory-screen-v14 victory-screen-v15" id="victoria" aria-label="Certificado de finalización">
+<section class="victory-screen" id="victoria" aria-label="Certificado de finalización">
 
-    <div class="certificate-shell-v15">
-        <article class="certificate-paper-v15">
+    <div class="certificate-shell">
+        <article class="certificate-paper">
             <div class="certificate-corner corner-tl"></div>
             <div class="certificate-corner corner-tr"></div>
             <div class="certificate-corner corner-bl"></div>
             <div class="certificate-corner corner-br"></div>
 
-            <header class="certificate-header-v15">
-                <div class="certificate-brand-v15">
+            <header class="certificate-header">
+                <div class="certificate-brand">
                     <div class="certificate-brand-mark">ACS</div>
                     <div>
-                        <p>PROGRAMA DE FORMACIÓN DIGITAL</p>
+                        <p>CENTRO DE ENTRENAMIENTO DIGITAL</p>
                         <strong>ANALISTA CLIC SEGURO</strong>
                     </div>
                 </div>
 
-                <div class="certificate-status-v15">
+                <div class="certificate-status">
                     <span>5 / 5</span>
                     <small>NIVELES SUPERADOS</small>
                 </div>
             </header>
 
-            <div class="certificate-title-block-v15">
-                <p class="certificate-overline-v15">CERTIFICADO DE FINALIZACIÓN</p>
+            <div class="certificate-title-block">
+                <p class="certificate-overline">CERTIFICADO DE FINALIZACIÓN</p>
                 <h2>Analista Clic Seguro</h2>
                 <div class="certificate-title-rule"></div>
             </div>
 
-            <div class="certificate-statement-v15">
-                <p class="certificate-prefix-v15">Certifico que:</p>
-                <div class="certificate-name-slot-v15" id="certificado-nombre"></div>
-                <p class="certificate-main-text-v15">
-                    ha superado los cinco niveles del juego <strong>Misión Clic Seguro</strong>,
-                    logrando identificar señales de phishing y tomando decisiones seguras antes de hacer clic.
+            <div class="certificate-statement">
+                <p class="certificate-prefix">Certifico que:</p>
+                <div class="certificate-name-slot" id="certificado-nombre"></div>
+                <p class="certificate-main-text">
+                    ha superado los cinco niveles del juego <strong>Misión Clic Seguro</strong> y desarmado la operación de
+                    <strong>PHISH-X</strong>, logrando identificar señales de phishing y tomando decisiones seguras antes de hacer clic.
                 </p>
             </div>
 
-            <section class="certificate-scores-v15" aria-label="Puntajes por nivel">
-                <div class="section-heading-v15">
+            <section class="certificate-scores" aria-label="Puntajes por nivel">
+                <div class="section-heading">
                     <span>01</span>
                     <div>
                         <small>DESEMPEÑO</small>
@@ -879,17 +977,17 @@
                     </div>
                 </div>
 
-                <div class="level-score-grid-v15">
-                    <article><span>NIVEL 1</span><strong class="cert-score cert-score-l1"></strong><small>puntos</small><i>✓</i></article>
-                    <article><span>NIVEL 2</span><strong class="cert-score cert-score-l2"></strong><small>puntos</small><i>✓</i></article>
-                    <article><span>NIVEL 3</span><strong class="cert-score cert-score-l3"></strong><small>puntos</small><i>✓</i></article>
-                    <article><span>NIVEL 4</span><strong class="cert-score cert-score-l4"></strong><small>puntos</small><i>✓</i></article>
-                    <article><span>NIVEL 5</span><strong class="cert-score cert-score-l5"></strong><small>puntos</small><i>✓</i></article>
+                <div class="level-score-grid">
+                    <article><span>NIVEL 1</span><strong class="cert-score cert-score-l1"></strong><small>puntos</small><span class="cert-check" aria-hidden="true">✓</span></article>
+                    <article><span>NIVEL 2</span><strong class="cert-score cert-score-l2"></strong><small>puntos</small><span class="cert-check" aria-hidden="true">✓</span></article>
+                    <article><span>NIVEL 3</span><strong class="cert-score cert-score-l3"></strong><small>puntos</small><span class="cert-check" aria-hidden="true">✓</span></article>
+                    <article><span>NIVEL 4</span><strong class="cert-score cert-score-l4"></strong><small>puntos</small><span class="cert-check" aria-hidden="true">✓</span></article>
+                    <article><span>NIVEL 5</span><strong class="cert-score cert-score-l5"></strong><small>puntos</small><span class="cert-check" aria-hidden="true">✓</span></article>
                 </div>
             </section>
 
-            <section class="certificate-summary-v15" aria-label="Resumen de la partida">
-                <div class="certificate-main-metrics-v15">
+            <section class="certificate-summary" aria-label="Resumen de la partida">
+                <div class="certificate-main-metrics">
                     <article>
                         <small>PUNTAJE TOTAL</small>
                         <div><strong class="puntaje-valor"></strong><span>/ 500</span></div>
@@ -908,13 +1006,13 @@
                     </article>
                 </div>
 
-                <aside class="certificate-verification-v15">
-                    <div class="verification-heading-v15">
+                <aside class="certificate-verification">
+                    <div class="verification-heading">
                         <span>VERIFICACIÓN</span>
                         <small>DATOS PRINCIPALES</small>
                     </div>
 
-                    <div class="qr-stack qr-stack-v15">
+                    <div class="qr-stack">
                         <div class="qr-variant qr-activo"><img id="qr-certificado" src="qr/100-100-100-100-100.png" width="207" height="207" decoding="async" alt="Código QR del certificado"/><small id="codigo-certificado">ACS-AAAAA-L5</small></div>
                     </div>
 
@@ -922,15 +1020,15 @@
                 </aside>
             </section>
 
-            <footer class="certificate-footer-v15">
-                <div class="certificate-emission-v15">
+            <footer class="certificate-footer">
+                <div class="certificate-emission">
                     <small>FECHA DE EMISIÓN</small>
-                    <!-- El estudiante elige la fecha de emisión con el calendario; ese valor es el que se imprime. -->
-                    <input class="certificate-date-input-v20" id="fecha-emision" name="fecha-emision" type="date" required aria-label="Fecha de emisión del certificado"/>
-                    <label class="certificate-date-hint-v20" for="fecha-emision"><i class="bi bi-calendar-event" aria-hidden="true"></i> Elegí la fecha antes de imprimir</label>
+                    <!-- script.js propone la fecha de hoy; el estudiante puede cambiarla con el calendario y ese valor es el que se imprime. -->
+                    <input class="certificate-date-input" id="fecha-emision" name="fecha-emision" type="date" required aria-label="Fecha de emisión del certificado"/>
+                    <label class="certificate-date-hint" for="fecha-emision"><i class="bi bi-calendar-event" aria-hidden="true"></i> Podés cambiar la fecha antes de imprimir</label>
                 </div>
 
-                <div class="certificate-seal-v15">
+                <div class="certificate-seal">
                     <span>✓</span>
                     <div>
                         <strong>CAMPAÑA COMPLETA</strong>
@@ -938,7 +1036,7 @@
                     </div>
                 </div>
 
-                <div class="certificate-signature-v15">
+                <div class="certificate-signature">
                     <span></span>
                     <strong>Equipo Clic Seguro</strong>
                     <small>Validación del trayecto</small>
@@ -946,13 +1044,13 @@
             </footer>
         </article>
 
-        <div class="certificate-toolbar-v15">
-            <button type="button" class="certificate-print-button-v15" id="btn-imprimir"><i class="bi bi-printer-fill" aria-hidden="true"></i> IMPRIMIR / GUARDAR COMO PDF</button>
-            <button class="certificate-restart-v15" type="button" id="btn-jugar-de-nuevo"><i class="bi bi-arrow-repeat" aria-hidden="true"></i> JUGAR DE NUEVO</button>
+        <div class="certificate-toolbar">
+            <button type="button" class="certificate-print-button" id="btn-imprimir"><i class="bi bi-printer-fill" aria-hidden="true"></i> IMPRIMIR / GUARDAR COMO PDF</button>
+            <button class="certificate-restart" type="button" id="btn-jugar-de-nuevo"><i class="bi bi-arrow-repeat" aria-hidden="true"></i> JUGAR DE NUEVO</button>
         </div>
     </div>
 
-    <p class="certificate-print-nota"><i class="bi bi-info-circle" aria-hidden="true"></i> Antes de imprimir elegí la <strong>fecha de emisión</strong>. En la ventana de impresión activá <strong>Gráficos de fondo</strong> para que salgan los colores y el sello.</p>
+    <p class="certificate-print-nota"><i class="bi bi-info-circle" aria-hidden="true"></i> Antes de imprimir revisá la <strong>fecha de emisión</strong>. En la ventana de impresión activá <strong>Gráficos de fondo</strong> para que salgan los colores y el sello.</p>
 </section>
 
 
@@ -960,17 +1058,17 @@
 </main>
 </div>
 
-<section class="game-over-overlay game-over-v12" aria-label="Partida perdida">
+<section class="game-over-overlay" aria-label="Partida perdida">
     <div class="game-over-card" data-augmented-ui="tl-clip tr-clip br-clip bl-clip border">
         <p class="game-over-icon"><i class="bi bi-heartbreak-fill" aria-hidden="true"></i></p>
-        <p class="nivel-tag">PARTIDA TERMINADA</p>
+        <p class="nivel-tag">PARTIDA TERMINADA · PHISH-X GANÓ ESTA RONDA</p>
         <h2>Te quedaste sin vidas</h2>
-        <p>Consumiste las <strong>5 vidas de la campaña</strong>. Al recomenzar se reinician puntaje, gemas, vidas, respuestas y tiempo.</p>
+        <p>Consumiste las <strong>5 vidas de la campaña</strong> y esta vez PHISH-X logró engañarte. BYTE ya preparó un nuevo entrenamiento: al recomenzar se reinician puntaje, gemas, vidas, respuestas y tiempo.</p>
         <div class="profile-preserved">
             <span>✓</span>
-            <p><strong>Tu perfil se conserva:</strong> nombre, avatar y grupo de edad. No vas a repetir el video ni las fotos.</p>
+            <p><strong>Tu perfil se conserva:</strong> nombre y avatar. No vas a repetir el video ni las fotos.</p>
         </div>
-        <p class="retry-destination-v13">Volverás al final de <strong>“Cómo funciona la partida”</strong>, donde está el botón <strong>INICIAR PARTIDA · NIVEL 1</strong>.</p>
+        <p class="retry-destination">Volverás al final de <strong>“Cómo funciona la partida”</strong>, donde está el botón <strong>INICIAR PARTIDA · NIVEL 1</strong>.</p>
         <button class="restart-button" data-augmented-ui="tl-clip br-clip border" type="button" id="btn-reintentar"><i class="bi bi-arrow-repeat" aria-hidden="true"></i> VOLVER A INICIAR NIVEL 1</button>
     </div>
 </section>
