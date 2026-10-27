@@ -622,7 +622,7 @@ function mostrarCertificado() {
     }
     const codigo = codigoCertificado(puntosPorNivel, vidas);
     const imagenQR = document.querySelector("#qr-certificado");
-    imagenQR.src = "qr/" + claveQR(puntosPorNivel) + ".png";
+    imagenQR.src = "qr/" + claveQR(puntosPorNivel) + ".svg";
     imagenQR.alt = "Código QR del certificado " + codigo;
     document.querySelector("#codigo-certificado").textContent = codigo;
 

@@ -3428,9 +3428,11 @@ body.nivel-5-ganado .certificate-verification{
 body.nivel-5-ganado .qr-stack{
     min-height:105px !important;
 }
+/* El QR (SVG con su margen blanco) necesita tamaño para que la cámara
+   del celular lo lea desde una distancia normal. */
 body.nivel-5-ganado .qr-stack .qr-variant img{
-    width:103px !important;
-    height:103px !important;
+    width:124px !important;
+    height:124px !important;
 }
 body.nivel-5-ganado .certificate-footer{
     margin-top:11px !important;
